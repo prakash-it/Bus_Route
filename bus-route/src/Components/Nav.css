@@ -22,9 +22,10 @@
     height: 10vh;
     box-shadow: rgba(50, 50, 93, 0.23)0 30px 30px -20px;
 }
-.logo
+.logo 
 {
     font-size: 30px;
+    
 }
 
 .container
