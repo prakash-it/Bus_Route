@@ -4,13 +4,14 @@ import './App.css';
 import Home from './Components/Home';
 import About from './Components/About';
 import Contect from './Components/Contect';
-import { Navbar } from 'reactstrap';
+import Navbar from './Components/Navbar';
+
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+    <Navbar/>
  <Routes>
   <Route path='/' element={<Home/>}/>
   <Route path='/about' element={<About/>}/>
