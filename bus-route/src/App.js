@@ -5,6 +5,7 @@ import Home from './Components/Home';
 import About from './Components/About';
 import Contect from './Components/Contect';
 import Navbar from './Components/Navbar';
+import Filter from './Components/Filter';
 
 import Admin from './Components/Admin';
 
@@ -17,7 +18,9 @@ import Admintable from './Components/Admintable';
 function App() {
   return (
     <div className="App">
-    {/* <Navbar/>
+
+      {/* <Navbar/>
+
  <Routes>
   <Route path='/' element={<Home/>}/>
   <Route path='/about' element={<About/>}/>
@@ -28,6 +31,9 @@ function App() {
 
   <Route  path='/signin' element={<Signin/>}/> 
  </Routes>
+
+ <Signin/> */}
+
   */}
   
 
