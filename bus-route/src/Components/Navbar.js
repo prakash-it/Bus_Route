@@ -20,6 +20,7 @@ export default function MyNavbar() {
             <NavLink className='nav-link' to='/' onClick={() => setMobile(false)}>Home</NavLink>
             <NavLink className='nav-link' to='/about' onClick={() => setMobile(false)}>About</NavLink>
             <NavLink className='nav-link' to='/contact' onClick={() => setMobile(false)}>Contact</NavLink>
+            <button><NavLink to='/signin' onClick={()=>setMobile(false)}> SignIn</NavLink></button>
           </Nav>
         </Navbar.Collapse>
     </Navbar>
