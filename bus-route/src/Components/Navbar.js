@@ -5,7 +5,7 @@ import { ImCross } from "react-icons/im";
 import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
-  const [mobile, setMobile] = useState(false); // Set mobile to false by default
+  const [mobile, setMobile] = useState(false)
 
   return (
     <div className='navbar'>
