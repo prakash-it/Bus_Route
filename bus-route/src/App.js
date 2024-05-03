@@ -6,18 +6,20 @@ import About from './Components/About';
 import Contect from './Components/Contect';
 import Signin from './Components/Signin';
 import Navbar from './Components/Navbar';
+import Filter from './Components/Filter';
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      {/* <Navbar/>
  <Routes>
   <Route path='/' element={<Home/>}/>
   <Route path='/about' element={<About/>}/>
   <Route path='/contact' element={<Contect/>}/>  
  </Routes>
- <Signin/>
+ <Signin/> */}
+ <Filter/>
     </div>
   );
 }

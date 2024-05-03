@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Logo from '../Components/Images/Logo.png'
 import '../Components/Nav.css';
 import { FaBars } from "react-icons/fa6";
 import { ImCross } from "react-icons/im";
@@ -11,7 +12,7 @@ export default function Navbar() {
     <div className='navbar'>
 
       <div className='containerss'>
-        <h2 className='logo'>Logo</h2>
+        <h2 className='logo'><image src={Logo}/></h2>
         <button className='mobile-menu' onClick={() => setMobile(!mobile)}>
           {mobile ? <FaBars />:<ImCross />}
         </button>
@@ -22,6 +23,7 @@ export default function Navbar() {
           <NavLink className={'nav signin'} to='/signin' onClick={()=>setMobile(false)} style={{border:'2px solid black',borderRadius:'25px', background:'green'}}>SignIn</NavLink>
         </nav>
      </div>
+     
     </div>
   );
 }
