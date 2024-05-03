@@ -1,94 +1,72 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  .nav {
-    text-decoration: none;
-  }
-  
-  .nav-item1,
-  .nav-item2,
-  .nav-item3 {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%; 
-  }
-  
-  .navbar {
-    line-height: 10vh;
-    height: 10vh;
-
-    box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
-  
-  }
-  
-  .logo {
-    font-size: 30px;
-  }
-  
-  .containerss {
-
-    box-shadow: rgba(50, 50, 93, 0.23)0 30px 30px -20px;
-}
-.logo 
-{
-    font-size: 30px;
-    
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.container
-{
+.nav {
+  text-decoration: none;
+}
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 90%;
-    margin: auto;
-  }
-  
-  .nav {
-    color: black;
-    font-size: 20px;
-    padding: 0 10px;
-    margin: 0 10px;
-    text-transform: capitalize;
-  }
-  
-  button {
-    border: none;
-    background: none;
-    font-size: 20px;
-    display: none; 
-  }
-  
+.nav-item1,
+.nav-item2,
+.nav-item3 {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navbar {
+  line-height: 10vh;
+  height: 10vh;
+  box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
+}
+
+.logo {
+  font-size: 30px;
+}
+
+
+
+.nav {
+  color: black;
+  font-size: 20px;
+  padding: 0 10px;
+  margin: 0 10px;
+  text-transform: capitalize;
+}
+
+button {
+  border: none;
+  background: none;
+  font-size: 20px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
   .mobile-menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    list-style: none;
+    box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
+    top: 10%;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    padding-top: 50px;
+  }
+
+  .nav-links-mobile {
     display: none;
   }
-  
-  @media (max-width: 768px) {
-    .mobile-menu {
-      display: block; 
-    }
-  
-    .nav-links {
-      display: flex;
-      flex-direction: column; 
-      position: absolute;
-      list-style: none;
-      box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
-      top: 10%;
-      left: 0;
-      transition: all 0.5s ease-in-out;
-      width: 100%;
-      background-color: white;
-      z-index: 1; 
-      padding-top: 50px; 
-    }
-  
-    .nav-links-mobile {
-      display: none; 
-    }
-  }
-  
+} */
