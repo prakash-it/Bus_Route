@@ -9,6 +9,7 @@ export default function MyNavbar() {
   const [mobile, setMobile] = useState(false);
 
   return (
+
     <Navbar bg="light" expand="lg text align-center" >
         <Navbar.Brand href="/">Logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setMobile(!mobile)}>
@@ -22,5 +23,7 @@ export default function MyNavbar() {
           </Nav>
         </Navbar.Collapse>
     </Navbar>
+
+
   );
 }

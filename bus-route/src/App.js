@@ -4,6 +4,11 @@ import './App.css';
 import Home from './Components/Home';
 import About from './Components/About';
 import Contect from './Components/Contect';
+
+import Navbar from './Components/Navbar';
+
+
+import Signin from './Components/Signin';
 import Navbar from './Components/Navbar';
 
 
@@ -17,6 +22,7 @@ function App() {
   <Route path='/about' element={<About/>}/>
   <Route path='/contact' element={<Contect/>}/>  
  </Routes>
+ <Signin/>
     </div>
   );
 }
