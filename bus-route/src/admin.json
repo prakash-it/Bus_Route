@@ -1,0 +1,32 @@
+{
+  "admin": [
+    {
+      "id": "1",
+      "busno": "12",
+      "time": "9:00",
+      "from": "Salem",
+      "to": "kovai"
+    },
+    {
+      "id": "2",
+      "busno": "102",
+      "time": "10:00",
+      "from": "kovai",
+      "to": "salem"
+    },
+    {
+      "busno": "112",
+      "time": "9:00",
+      "from": "kallakurachi",
+      "to": "kovai",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "busno": "876",
+      "time": "12:00",
+      "from": "channei",
+      "to": "kovai"
+    }
+  ]
+}
