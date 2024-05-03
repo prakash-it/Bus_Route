@@ -9,6 +9,7 @@ export default function Navbar() {
 
   return (
     <div className='navbar'>
+
       <div className='containerss'>
         <h2 className='logo'>Logo</h2>
         <button className='mobile-menu' onClick={() => setMobile(!mobile)}>
@@ -19,6 +20,16 @@ export default function Navbar() {
           <NavLink className={'nav navitem2'} to='/about' onClick={() => setMobile(false)}>About</NavLink>
           <NavLink className={'nav navitem3'} to='/contact' onClick={() => setMobile(false)}>Contact</NavLink>
         </nav>
+
+
+        <div className='container'>
+        <h2 className='logo'>Logo</h2>
+        <nav className='nav-links'>
+        <NavLink className={'nav navitem1'} to='/'>Home</NavLink>
+        <NavLink className={'nav navitem2'} to='/about'>About</NavLink>
+        <NavLink className={'nav navitem3'} to='/contact'>Contact</NavLink>
+      </nav>
+
       </div>
     </div>
   );

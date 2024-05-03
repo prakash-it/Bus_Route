@@ -19,6 +19,7 @@
   .navbar {
     line-height: 10vh;
     height: 10vh;
+
     box-shadow: rgba(50, 50, 93, 0.23) 0 30px 30px -20px;
   
   }
@@ -28,6 +29,18 @@
   }
   
   .containerss {
+
+    box-shadow: rgba(50, 50, 93, 0.23)0 30px 30px -20px;
+}
+.logo 
+{
+    font-size: 30px;
+    
+}
+
+.container
+{
+
     display: flex;
     justify-content: space-between;
     align-items: center;
