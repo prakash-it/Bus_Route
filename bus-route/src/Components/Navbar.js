@@ -19,6 +19,7 @@ export default function Navbar() {
           <NavLink className={'nav navitem1'} to='/' onClick={() => setMobile(false)}>Home</NavLink>
           <NavLink className={'nav navitem2'} to='/about' onClick={() => setMobile(false)}>About</NavLink>
           <NavLink className={'nav navitem3'} to='/contact' onClick={() => setMobile(false)}>Contact</NavLink>
+          <NavLink className={'nav signin'} to='/signin' onClick={()=>setMobile(false)} style={{border:'2px solid black',borderRadius:'25px', background:'green'}}>SignIn</NavLink>
         </nav>
      </div>
     </div>
