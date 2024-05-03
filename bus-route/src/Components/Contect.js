@@ -1,9 +1,11 @@
 import React from 'react'
 
 export default function Contect() {
+  
   return (
     <div>
-      hello
+         <h2 className=''>Contact Us</h2>
+     
     </div>
   )
 }

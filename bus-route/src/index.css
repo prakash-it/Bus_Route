@@ -5,9 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.cardDesign{
+  width: 200px;
+  height: 100px;
+}
+.mainDiv{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 400px);
+  justify-content: center;
+}
+.myImage{
+  height: auto;
+  width: auto;
+}
+.row{
+  justify-content: center;
 }
