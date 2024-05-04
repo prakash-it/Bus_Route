@@ -1,25 +1,117 @@
 {
   "admin": [
     {
-      "busno": "13",
-      "time": "9:05",
-      "from": "Salem",
-      "to": "kovai",
-      "id": "1"
+      "id": "18bf",
+      "busno": "45",
+      "time": "4:00",
+      "from": "singanallur",
+      "to": "gandhipuram"
     },
     {
-      "busno": "112",
-      "time": "9:00",
-      "from": "kallakurachi",
-      "to": "kovai",
-      "id": "3"
+      "id": "2a68",
+      "busno": "65",
+      "time": "5:00",
+      "from": "singanallur",
+      "to": "gandhipuram"
     },
     {
-      "id": "4",
-      "busno": "876",
+      "id": "4ddb",
+      "busno": "111",
+      "time": "1:00",
+      "from": "gandhipuram",
+      "to": "thudiayalur"
+    },
+    {
+      "id": "6239",
+      "busno": "42A",
       "time": "12:00",
-      "from": "channei",
-      "to": "kovai"
+      "from": "gandhipuram",
+      "to": "annur"
+    },
+    {
+      "id": "6854",
+      "busno": "23",
+      "time": "2:00",
+      "from": "gandhipuram",
+      "to": "ukkadam"
+    },
+    {
+      "busno": "1516",
+      "time": "9:00",
+      "from": "ukkadam",
+      "to": "gandhipuram",
+      "id": "79d2"
+    },
+    {
+      "id": "721e",
+      "busno": "12c",
+      "time": "5:00",
+      "from": "ukkadam",
+      "to": "thudiayalur"
+    },
+    {
+      "id": "7596",
+      "busno": "12a",
+      "time": "12:05",
+      "from": "ukkadam",
+      "to": "gandhipuram"
+    },
+    {
+      "id": "9638",
+      "busno": "111",
+      "time": "7:00",
+      "from": "ukkadam",
+      "to": "gandhipuram"
+    },
+    {
+      "id": "954e",
+      "busno": "12a",
+      "time": "12",
+      "from": "ukkadam",
+      "to": "gandhipuram"
+    }
+  ],
+  "user": [
+    {
+      "name": "Adam",
+      "email": "Ad@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "ee95",
+      "name": "praksh",
+      "email": "pc@gmail.com",
+      "password": "987654"
+    },
+    {
+      "id": "da5f",
+      "name": "Nk",
+      "email": "nk@gmail.com",
+      "password": "1516"
+    },
+    {
+      "id": "a9dd",
+      "name": "dd",
+      "email": "dd@gmail.com",
+      "password": "7122"
+    },
+    {
+      "id": "f445",
+      "name": "dd2",
+      "email": "dd2@gmail.com",
+      "password": "7502"
+    },
+    {
+      "id": "3fd1",
+      "name": "naveen",
+      "email": "nkg@gmail.com",
+      "password": "9876"
+    },
+    {
+      "id": "1f87",
+      "name": "ghsad",
+      "email": "sdfnln@gmail.com",
+      "password": "12345"
     }
   ]
 }

@@ -10,14 +10,14 @@ export default function Filter() {
 
        
         useEffect(()=>{
-            axios.get(`http://localhost:3005/BusDetails`)
+            axios.get(`http://localhost:1516/admin`)
             .then(res=>setOutput(res.data))
             .catch(err=>console.log(err))
         },[])
         
         const getDetails=(e)=>{
             setTo(e.target.value)
-            const filtered=output.filter(x=>x.start === from && x.end === e.target.value)
+            const filtered=output.filter(x=>x.from === from && x.to === e.target.value)
             setFilteredData(filtered)
             setTable(true)
         }
@@ -45,6 +45,7 @@ export default function Filter() {
             <thead>
                 <tr>
                     <th>Bus.No</th>
+                    <th>Time</th>
                     <th>Start</th>
                     <th>End</th>
                 </tr>
@@ -52,8 +53,9 @@ export default function Filter() {
             <tbody>
                 {filterData.map((x)=>(<tr key={x.busno}>
                     <td>{x.busno}</td> 
-                    <td>{x.start}</td> 
-                    <td>{x.end}</td>
+                    <td>{x.time}</td>
+                    <td>{x.from}</td> 
+                    <td>{x.to}</td>
                     </tr>))}
             </tbody>
         </table>
