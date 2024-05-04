@@ -6,6 +6,7 @@ export default function Filter() {
     const[to,setTo]=useState('ukkadam')
     const[output,setOutput]=useState([])
     const[filterData,setFilteredData]=useState([])
+    const[table,setTable]=useState(false)
 
        
         useEffect(()=>{
@@ -18,6 +19,7 @@ export default function Filter() {
             setTo(e.target.value)
             const filtered=output.filter(x=>x.start === from && x.end === e.target.value)
             setFilteredData(filtered)
+            setTable(true)
         }
 
     
@@ -38,7 +40,7 @@ export default function Filter() {
             <option value={"RTO"}>RTO</option>
             <option value='gandhipuram'>Gandhipuram</option>
         </select><br></br>
-        <label>Bus Details:</label>
+        {table&&
         <table>
             <thead>
                 <tr>
@@ -55,6 +57,7 @@ export default function Filter() {
                     </tr>))}
             </tbody>
         </table>
+}
     </div>
   )
 }

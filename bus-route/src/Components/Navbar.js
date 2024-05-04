@@ -2,28 +2,31 @@ import React, { useState } from 'react';
 import Logo from '../Components/Images/Logo.png'
 import '../Components/Nav.css';
 import { FaBars } from "react-icons/fa6";
+import { Navbar, Nav } from 'react-bootstrap';
 import { ImCross } from "react-icons/im";
 import { NavLink } from 'react-router-dom';
+import '../Components/Nav.css';
 
-export default function Navbar() {
-  const [mobile, setMobile] = useState(false)
+export default function MyNavbar() {
+  const [mobile, setMobile] = useState(false);
 
   return (
-    <div className='navbar'>
 
-      <div className='containerss'>
-        <h2 className='logo'><image src={Logo}/></h2>
-        <button className='mobile-menu' onClick={() => setMobile(!mobile)}>
-          {mobile ? <FaBars />:<ImCross />}
-        </button>
-        <nav className={mobile ? 'nav-links-mobile' : 'nav-links'}>
-          <NavLink className={'nav navitem1'} to='/' onClick={() => setMobile(false)}>Home</NavLink>
-          <NavLink className={'nav navitem2'} to='/about' onClick={() => setMobile(false)}>About</NavLink>
-          <NavLink className={'nav navitem3'} to='/contact' onClick={() => setMobile(false)}>Contact</NavLink>
-          <NavLink className={'nav signin'} to='/signin' onClick={()=>setMobile(false)} style={{border:'2px solid black',borderRadius:'25px', background:'green'}}>SignIn</NavLink>
-        </nav>
-     </div>
-     
-    </div>
+    <Navbar bg="light" expand="lg text align-center" >
+        <Navbar.Brand href="/">Logo</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setMobile(!mobile)}>
+          {mobile ? <ImCross /> : <FaBars />}
+        </Navbar.Toggle>
+        <Navbar.Collapse id="basic-navbar-nav" className={mobile ? 'show' : ''}>
+          <Nav className="mx-auto m-2">
+            <NavLink className='nav-link' to='/' onClick={() => setMobile(false)}>Home</NavLink>
+            <NavLink className='nav-link' to='/about' onClick={() => setMobile(false)}>About</NavLink>
+            <NavLink className='nav-link' to='/contact' onClick={() => setMobile(false)}>Contact</NavLink>
+            <button><NavLink to='/signin' onClick={()=>setMobile(false)}> SignIn</NavLink></button>
+          </Nav>
+        </Navbar.Collapse>
+    </Navbar>
+
+
   );
 }
