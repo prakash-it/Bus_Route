@@ -19,7 +19,10 @@ function App() {
   return (
     <div className="App">
 
+
     {/* <Navbar/>
+
+
 
       {/* <Navbar/>
 
@@ -31,10 +34,16 @@ function App() {
  </Routes>
 
  <Admin/>
+
+
+ <Admin/>
  <Signin/> 
   <Route  path='/signin' element={<Signin/>}/> 
  </Routes>
-  */}
+
+ <Signin/> */}
+
+
   
   <Admin/>
 
@@ -44,6 +53,7 @@ function App() {
 
 
  <Filter/>
+
 
     </div>
   );
