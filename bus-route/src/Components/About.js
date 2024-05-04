@@ -1,42 +1,78 @@
 import React from 'react'
-import img5 from '../img5.jfif'
-import img2 from '../img2.jfif'
-import img3 from '../img3.jfif'
+import image1 from '../img1.jpg'
 import '../Components/Nav.css'
+import { Col, Container, Row } from 'react-bootstrap'
+
 export default function About() {
   return (
     <div>
       <div className='ab'>ABOUT US</div>
-      <div class="row col-lg-12">
-        <div class="col-sm-3 mb-3 mb-sm-0 cardDiv">
-          <div class="card">
-            <img className='myImage' src={img2} alt='busImage'/>
-            <div class="card-body">
-              <h5 class="card-title">NAVEEN KUMAR</h5>
-         
-              <a href="#" class="btn btn-primary">More...</a>
+
+     
+      <Container style={{ marginTop: '20px' }}>
+        <Row>
+          <Col>
+            <h1> Dhivakar</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+              malesuada, arcu ac blandit tristique, tortor nisi consequat est,
+              commodo scelerisque ante orci id enim. Suspendisse imperdiet
+              accumsan ligula, a rhoncus risus imperdiet sed. In et erat diam.
+              Nullam elementum ac ante consequat dapibus. Nunc finibus bibendum
+              ex, pulvinar pellentesque felis varius ac.
+            </p>
+          </Col>
+          <Col>
+            <div className='d-none d-md-block'>
+              <img className='myImage' width={80} height={100} src={image1} alt='busImage' />
             </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-          <img className='myImage' src={img5} alt='busImage'/>
-            <div class="card-body">
-              <h5 class="card-title">PRAKASH </h5>
-              <a href="#" class="btn btn-primary">More...</a>
+          </Col>
+        </Row>
+      </Container>
+
+      <Container style={{ marginTop: '20px' }}>
+        <Row>
+          <Col>
+            <div className='d-none d-md-block'>
+              <img className='myImage' width={80} height={100} src={image1} alt='busImage' />
             </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-          <img className='myImage' src={img3} alt='busImage'/>
-            <div class="card-body">
-              <h5 class="card-title"> DHIVAKAR </h5>
-              <a href="#" class="btn btn-primary">More...</a>
+          </Col>
+          <Col>
+            <h1> Prakash</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+              malesuada, arcu ac blandit tristique, tortor nisi consequat est,
+              commodo scelerisque ante orci id enim. Suspendisse imperdiet
+              accumsan ligula, a rhoncus risus imperdiet sed. In et erat diam.
+              Nullam elementum ac ante consequat dapibus. Nunc finibus bibendum
+              ex, pulvinar pellentesque felis varius ac.
+            </p>
+          </Col>
+        </Row>
+      </Container>
+
+      <Container style={{ marginTop: '20px' }}>
+        <Row>
+          <Col>
+            <h1>Naveen kumar</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+              malesuada, arcu ac blandit tristique, tortor nisi consequat est,
+              commodo scelerisque ante orci id enim. Suspendisse imperdiet
+              accumsan ligula, a rhoncus risus imperdiet sed. In et erat diam.
+              Nullam elementum ac ante consequat dapibus. Nunc finibus bibendum
+              ex, pulvinar pellentesque felis varius ac.
+            </p>
+          </Col>
+          <Col>
+            <div className='d-none d-md-block'>
+              <img className='myImage' width={80} height={100} src={image1} alt='busImage' />
             </div>
-          </div>
-        </div>        
-      </div> 
+          </Col>
+        </Row>
+      </Container>
+     
     </div>
+
   )
 }
