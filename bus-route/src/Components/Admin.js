@@ -5,14 +5,14 @@ import {useState} from 'react'
 
 export default function Admin() {
 
-    const[number, setNumber]=useState('')
+    const[busno, setNumber]=useState('')
     const[time, setTime]=useState('')
     const[from, setFrom]=useState('select')
     const[to, setTo]=useState('select')
 
-    const storeData=(e)=>{
-        e.preventDefault()
-        axios.post('http://localhost:6001/busDetails', {number, time, from, to})
+    const storeData=()=>{
+        // e.preventDefault()
+        axios.post('http://localhost:1516/admin', {busno, time, from, to})
         .then(res=>console.log(res))
         .catch(err=>console.log(err))
     }
@@ -22,7 +22,7 @@ export default function Admin() {
             <form onSubmit={storeData}>
                 <h1>Admin Page</h1><br></br><br></br>
                 <label>Bus Number: </label>
-                <input type='text' value={number} onChange={(e)=>setNumber(e.target.value)}/> <br></br><br></br>
+                <input type='text' value={busno} onChange={(e)=>setNumber(e.target.value)}/> <br></br><br></br>
                 <label>Bus Time: </label>
                 <input type='text' value={time} onChange={(e)=>setTime(e.target.value)}/> <br></br><br></br>
                 <label>From: </label>
