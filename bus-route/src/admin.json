@@ -50,11 +50,76 @@
       "to": "thudiayalur"
     },
     {
+
       "id": "cb1e",
       "busno": "21q",
       "time": "18:63pm",
       "from": "gandhipuram",
       "to": "ukkadam"
+
+      "id": "7596",
+      "busno": "12a",
+      "time": "12:05",
+      "from": "ukkadam",
+      "to": "gandhipuram"
+    },
+    {
+      "id": "9638",
+      "busno": "111",
+      "time": "7:00",
+      "from": "ukkadam",
+      "to": "gandhipuram"
+    },
+    {
+      "id": "954e",
+      "busno": "12a",
+      "time": "12",
+      "from": "ukkadam",
+      "to": "gandhipuram"
+    }
+  ],
+  "user": [
+    {
+      "name": "Adam",
+      "email": "Ad@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "ee95",
+      "name": "praksh",
+      "email": "pc@gmail.com",
+      "password": "987654"
+    },
+    {
+      "id": "da5f",
+      "name": "Nk",
+      "email": "nk@gmail.com",
+      "password": "1516"
+    },
+    {
+      "id": "a9dd",
+      "name": "dd",
+      "email": "dd@gmail.com",
+      "password": "7122"
+    },
+    {
+      "id": "f445",
+      "name": "dd2",
+      "email": "dd2@gmail.com",
+      "password": "7502"
+    },
+    {
+      "id": "3fd1",
+      "name": "naveen",
+      "email": "nkg@gmail.com",
+      "password": "9876"
+    },
+    {
+      "id": "1f87",
+      "name": "ghsad",
+      "email": "sdfnln@gmail.com",
+      "password": "12345"
+
     }
   ]
 }
