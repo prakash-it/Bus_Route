@@ -12,6 +12,9 @@ import Admin from './Components/Admin';
 
 import Signin from './Components/Signin';
 import Admintable from './Components/Admintable';
+import Auth from './Components/Auth';
+import Requiredauth from './Components/Requiredauth';
+import Login from './Components/Login';
 
 
 
@@ -20,24 +23,31 @@ function App() {
     <div className="App">
 
 
-  
+    {/* <Navbar/>
 
 
 
-       <Navbar/>
+      {/* <Navbar/>
 
  <Routes>
   <Route path='/' element={<Home/>}/>
   <Route path='/about' element={<About/>}/>
   <Route path='/contact' element={<Contect/>}/> 
+
+ </Routes>
+
+ <Admin/>
+
+
+ <Admin/>
+ <Signin/> 
   <Route  path='/signin' element={<Signin/>}/> 
  </Routes>
 
+ <Signin/> */}
 
 
-
-
-
+  
   <Admin/>
 
   

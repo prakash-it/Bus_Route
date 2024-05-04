@@ -7,8 +7,17 @@ import image4 from '../img4.jpg'
 import image5 from '../img5.webp'
 import image6 from '../img6.jpg'
 import '../index.css'
-
+import { Link, Outlet, Navigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import Login from './Login'
 export default function Home() {
+  const navigate = useNavigate()
+ const handleClick=()=>{
+  navigate('/Filter')
+  // return()=>{
+  //   navigate('/signin')
+  // }
+ }
   return (
     <div>
       {/*=================================== first row ===================================== */}
@@ -19,7 +28,11 @@ export default function Home() {
             <div class="card-body">
               <h5 class="card-title">Point to Point Bus</h5>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              {<div>
+                  <nav>
+                   <button class="btn btn-primary" onClick={handleClick}>Click here</button>
+                  </nav>
+                </div>}
             </div>
           </div>
         </div>
