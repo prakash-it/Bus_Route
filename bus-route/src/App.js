@@ -18,22 +18,16 @@ import Admintable from './Components/Admintable';
 function App() {
   return (
     <div className="App">
-
-      <Navbar />
-
+      {/* <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contect />} />
-
-      </Routes>
-      <Admin />
-
-      <Route path='/signin' element={<Signin />} />
-
-      <Signin />
-
-    </div >
+        <Route path='/signin' element={<Signin />} />
+      </Routes> */}
+      <Admin/>
+      
+    </div>
   );
 }
 

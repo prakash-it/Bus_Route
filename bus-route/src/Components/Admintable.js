@@ -66,7 +66,7 @@ export default function AdminTable() {
             <table>
                 <thead>
                     <tr>
-                        <th>Id</th>
+                        {/* <th>Id</th> */}
                         <th>Bus No</th>
                         <th>Timing</th>
                         <th>From</th>
@@ -77,7 +77,7 @@ export default function AdminTable() {
                 <tbody>
                     {admin.map(adminData => (
                         <tr key={adminData.id}>
-                            <td>{adminData.id}</td>
+                            {/* <td>{adminData.id}</td> */}
                             <td>{adminData.busno}</td>
                             <td>{adminData.time}</td>
                             <td>{adminData.from}</td>
