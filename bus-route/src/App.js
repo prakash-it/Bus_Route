@@ -12,6 +12,9 @@ import Admin from './Components/Admin';
 
 import Signin from './Components/Signin';
 import Admintable from './Components/Admintable';
+import Auth from './Components/Auth';
+import Requiredauth from './Components/Requiredauth';
+import Login from './Components/Login';
 
 
 
@@ -20,41 +23,22 @@ function App() {
     <div className="App">
 
 
-    {/* <Navbar/>
-
-
-
-      {/* <Navbar/>
-
- <Routes>
-  <Route path='/' element={<Home/>}/>
+<Auth>
+ <Navbar/>
+<Routes>
+  <Route path='/' element={<Home/>}>
+  </Route>
+  <Route path='/Filter' element={<Requiredauth>
+    <Filter/>
+    </Requiredauth>}/>
   <Route path='/about' element={<About/>}/>
   <Route path='/contact' element={<Contect/>}/> 
-
+  <Route  path='/signin' element={<Signin/>}/>
+  <Route path='/login' element={<Login/>}/>
  </Routes>
-
- <Admin/>
-
-
- <Admin/>
- <Signin/> 
-  <Route  path='/signin' element={<Signin/>}/> 
- </Routes>
-
- <Signin/> */}
-
-
-  
-  <Admin/>
-
-  
- <Admintable/>
-
-
-
- <Filter/>
-
-
+ {/* <Admin/>
+ <Admintable/> */}
+ </Auth>
     </div>
   );
 }
