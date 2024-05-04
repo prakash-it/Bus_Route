@@ -50,6 +50,13 @@
       "to": "thudiayalur"
     },
     {
+
+      "id": "cb1e",
+      "busno": "21q",
+      "time": "18:63pm",
+      "from": "gandhipuram",
+      "to": "ukkadam"
+
       "id": "7596",
       "busno": "12a",
       "time": "12:05",
@@ -112,6 +119,7 @@
       "name": "ghsad",
       "email": "sdfnln@gmail.com",
       "password": "12345"
+
     }
   ]
 }

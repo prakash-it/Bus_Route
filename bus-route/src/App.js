@@ -22,6 +22,9 @@ function App() {
   return (
     <div className="App">
 
+ 
+
+
 
 <Auth>
  <Navbar/>
@@ -39,6 +42,7 @@ function App() {
  {/* <Admin/>
  <Admintable/> */}
  </Auth>
+
     </div>
   );
 }
