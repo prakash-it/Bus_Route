@@ -23,39 +23,22 @@ function App() {
     <div className="App">
 
 
-    {/* <Navbar/>
-
-
-
-      {/* <Navbar/>
-
+    <Navbar/>
  <Routes>
   <Route path='/' element={<Home/>}/>
   <Route path='/about' element={<About/>}/>
   <Route path='/contact' element={<Contect/>}/> 
-
- </Routes>
-
- <Admin/>
-
-
- <Admin/>
- <Signin/> 
   <Route  path='/signin' element={<Signin/>}/> 
+
  </Routes>
 
- <Signin/> */}
+
+
+
 
 
   
-  <Admin/>
-
-  
- <Admintable/>
-
-
-
- <Filter/>
+ 
 
 
     </div>

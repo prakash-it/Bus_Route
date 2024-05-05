@@ -25,6 +25,7 @@ export default function Login() {
             }else{
                 setErrmsg("Incorrect Password")
             }
+            Navigate('/filter')
         }else{
             setErrmsg("User not Found Please Signin")
         }
@@ -38,6 +39,7 @@ export default function Login() {
             <label>Password:</label>
             <input type='password' value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
             <button type='submit'>Login</button>
+            {errmsg}
             </form>
     </div>
   )
