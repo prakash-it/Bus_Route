@@ -11,15 +11,17 @@ import '../Components/Home.css'
 
 import { Link, Outlet, Navigate } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import Login from './Login'
-export default function Home() {
+// import Login from './Login'
+export default function Home(props) {
   const navigate = useNavigate()
-  const handleClick = () => {
-    navigate('/Filter')
-    // return()=>{
-    //   navigate('/signin')
-    // }
-  }
+  const handleClick = (props) => {
+    console.log("button click");
+    if (props.islogged) {
+        navigate('/Filter');
+    } else {
+        navigate('/Login');
+    }
+};
   return (
     <div>
       <h1 className='bus-head'>Route Bus City Transport Portal</h1>
@@ -32,7 +34,7 @@ export default function Home() {
               <div class="card-body">
                 <h5 class="card-title">SETC Buses</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="baa-baa">Go somewhere</a>
+                <button className='baa-baa' onClick={handleClick}>Go somewhere</button>
               </div>
             </div>
           </div>
@@ -42,7 +44,7 @@ export default function Home() {
               <div class="card-body">
                 <h5 class="card-title">SETC Buses</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="baa-baa">Go somewhere</a>
+                <button className='baa-baa' onClick={handleClick}>Go somewhere</button>
               </div>
             </div>
           </div>
@@ -52,7 +54,7 @@ export default function Home() {
               <div class="card-body">
                 <h5 class="card-title">SETC Buses</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="baa-baa">Go somewhere</a>
+                <button className='baa-baa' onClick={handleClick}>Go somewhere</button>
               </div>
             </div>
           </div>
@@ -82,9 +84,7 @@ export default function Home() {
       </div>
       {/*======================================== Banner content End==============================*/}
 
-      {/*======================================== Carousel start===================================*/}
-
-    
+       
 
 
 

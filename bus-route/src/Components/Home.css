@@ -15,7 +15,8 @@
 .baa-baa {
     display: inline-block;
 
-   
+   background: none;
+   border: none;
     color: #ffffff; /* Set text color */
     text-decoration: none;
    
@@ -51,19 +52,19 @@
 
 .banner-container {
 
-    padding: 50px; /* Add padding for spacing */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    padding: 50px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .bus-para {
-    background-color: #ffffff; /* Set background color for the banner */
-    color: #000000; /* Set text color */
-    padding: 20px; /* Add padding for spacing */
-    border-radius: 5px; /* Add border radius for rounded corners */
+    background-color: #ffffff; 
+    color: #000000; 
+    padding: 20px; 
+    border-radius: 5px; 
 }
 
 .bus-para p {
-    margin: 0; /* Remove default margin for paragraph */
+    margin: 0;
 }
 

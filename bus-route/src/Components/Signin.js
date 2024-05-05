@@ -17,10 +17,10 @@ export default function Signin() {
         axios.post(`http://localhost:1516/user`,{name,email,password})
         .then(res=>console.log(res))
         .catch(err=>console.log(err))
-        navigate('/login')
+        navigate('/Login')
     }
     const handlelog=()=>{
-      navigate('/login')
+      navigate('/Login')
     }
   return (
     <div className='signinDiv'>
