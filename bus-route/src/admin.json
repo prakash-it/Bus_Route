@@ -50,18 +50,11 @@
       "to": "thudiayalur"
     },
     {
-
       "id": "cb1e",
       "busno": "21q",
       "time": "18:63pm",
       "from": "gandhipuram",
       "to": "ukkadam"
-
-      "id": "7596",
-      "busno": "12a",
-      "time": "12:05",
-      "from": "ukkadam",
-      "to": "gandhipuram"
     },
     {
       "id": "9638",
@@ -82,7 +75,8 @@
     {
       "name": "Adam",
       "email": "Ad@gmail.com",
-      "password": "12345"
+      "password": "12345",
+      "id": "8e03"
     },
     {
       "id": "ee95",
@@ -119,7 +113,12 @@
       "name": "ghsad",
       "email": "sdfnln@gmail.com",
       "password": "12345"
-
+    },
+    {
+      "id": "97da",
+      "name": "Sahana",
+      "email": "sahan@gmail.com",
+      "password": "NaveenMama"
     }
   ]
 }
