@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import Logo from '../Components/Images/Logo.png'
-
 import '../Components/Nav.css';
 import { FaBars } from "react-icons/fa6";
 
@@ -16,7 +15,7 @@ export default function MyNavbar() {
   const [mobile, setMobile] = useState(false);
 
   return (
-    <Navbar bg="light" expand="lg" className="text-align-center">
+    <Navbar bg="none" expand="lg" className="text-align-center">
       <Navbar.Brand href="/" className="mr-auto">
         <img src={Logo} alt="Logo" height={70} width={70} />
       </Navbar.Brand>
@@ -31,7 +30,7 @@ export default function MyNavbar() {
         </Nav>
         <Nav>
   <button style={{ backgroundColor: 'transparent', border: 'none' }}>
-    <NavLink to="/signin" onClick={() => setMobile(false)}>SignIn</NavLink>
+    <NavLink to="/signin" className="bas-bas" onClick={() => setMobile(false)}>SignIn</NavLink>
   </button>
 </Nav>
       </Navbar.Collapse>
