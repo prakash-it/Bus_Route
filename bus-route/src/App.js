@@ -22,40 +22,32 @@ function App() {
   return (
     <div className="App">
 
+      { <Auth>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />}>
+          </Route>
+          <Route path='/Filter' element={<Requiredauth>
+            <Filter />
+          </Requiredauth>} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contect />} />
+          <Route path='/signin' element={<Signin />} />
+          <Route path='/login' element={<Login />} />
+        </Routes>
+      </Auth> */}
+    
+    
 
-    {/* <Navbar/>
+
+   
 
 
 
-      {/* <Navbar/>
 
- <Routes>
-  <Route path='/' element={<Home/>}/>
-  <Route path='/about' element={<About/>}/>
-  <Route path='/contact' element={<Contect/>}/> 
-
- </Routes>
-
- <Admin/>
-
-
- <Admin/>
- <Signin/> 
-  <Route  path='/signin' element={<Signin/>}/> 
- </Routes>
-
- <Signin/> */}
 
 
   
-  <Admin/>
-
-  
- <Admintable/>
-
-
-
- <Filter/>
 
 
     </div>

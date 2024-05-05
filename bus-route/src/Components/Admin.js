@@ -18,8 +18,6 @@ export default function Admin() {
     const [to, setTo] = useState('select')
 
 
-
-
     const storeData=()=>{
         // e.preventDefault()
         axios.post('http://localhost:1516/admin', {busno, time, from, to})
@@ -97,4 +95,3 @@ export default function Admin() {
         </div>
     )
 }
-
