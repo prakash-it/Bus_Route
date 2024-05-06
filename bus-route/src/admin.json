@@ -1,4 +1,13 @@
 {
+
+  "adminlogin":[
+    {
+    "id":"1g3g4",
+    "name":"DPN",
+    "email":"dpn@gmail.com",
+    "password":"12345"
+    }
+  ],
   "admin": [
     {
       "id": "18bf",
@@ -69,6 +78,13 @@
       "time": "12",
       "from": "ukkadam",
       "to": "gandhipuram"
+    },
+    {
+      "id": "33aa",
+      "busno": "",
+      "time": "",
+      "from": "select",
+      "to": "select"
     }
   ],
   "user": [
@@ -137,6 +153,12 @@
       "name": "manoj",
       "email": "manoj123@gmail.com",
       "password": "1234"
+
+      "id": "c0e2",
+      "name": "DPN",
+      "email": "DPN@gmail.com",
+      "password": "12345"
+
     }
   ],
   "visitors": [

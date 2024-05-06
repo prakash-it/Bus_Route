@@ -10,11 +10,9 @@ import Button from 'react-bootstrap/Button';
 import { useAuth } from './Auth';
 import {useNavigate} from 'react-router-dom'
 
-
-
-export default function Filter() {
-    const [from, setFrom] = useState('Starting point')
-    const [to, setTo] = useState('Ending Point')
+export default function Filters() {
+    const [from, setFrom] = useState('Select your Starting point')
+    const [to, setTo] = useState('Select your Ending Point')
 
     const [output, setOutput] = useState([])
     const [filterData, setFilteredData] = useState([])
@@ -36,7 +34,7 @@ export default function Filter() {
         setTable(true)
     }
 
-    const clearFunction=()=>{
+    const clearFunction = () => {
         setFrom('Starting point')
         setTo('End point')
         setTable(false)
@@ -80,6 +78,42 @@ export default function Filter() {
                         </Col>
                     </Row>
                 </form>
+            </div>
+
+
+
+
+            {table && filterData.length > 0 && (
+    <Table responsive striped bordered hover size='lg' variant='dark'>
+        <thead>
+            <tr>
+                <th>Bus.No</th>
+                <th>Time</th>
+                <th>Start</th>
+                <th>End</th>
+            </tr>
+        </thead>
+        <tbody>
+            {filterData.sort((a, b) => a.time.localeCompare(b.time)).map((x) => (
+                <tr key={x.busno}>
+                    <td>{x.busno}</td>
+                    <td>{x.time}</td>
+                    <td>{x.from}</td>
+                    <td>{x.to}</td>
+                </tr>
+            ))}
+        </tbody>
+    </Table>
+)}
+
+{table && (
+    <div className='col-sm-2'>
+        <Button variant="light" onClick={clearFunction}>
+            Clear
+        </Button>
+    </div>
+)}
+
 
              {/* <h1 className='bus-head'>Select the Location to travel</h1>
             <form className='filterForm'>
@@ -174,6 +208,7 @@ export default function Filter() {
 //     </table>
 // )} */}
         </div>
+
         </div>
     )
 }
