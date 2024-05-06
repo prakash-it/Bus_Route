@@ -106,3 +106,14 @@ code {
 .filterForm{
   width: 500px;
 }
+.filterDiv{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.filterMainDiv{
+  display: grid;
+  justify-content: center;
+  margin: 20px;
+}

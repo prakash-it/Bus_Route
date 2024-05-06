@@ -4,11 +4,20 @@ import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Table from 'react-bootstrap/Table';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Button from 'react-bootstrap/Button';
 
+
+
+export default function Filter() {
+    const [from, setFrom] = useState('Starting point')
+    const [to, setTo] = useState('Ending Point')
 
 export default function Filters() {
     const [from, setFrom] = useState('Select your Starting point')
     const [to, setTo] = useState('Select your Ending Point')
+
     const [output, setOutput] = useState([])
     const [filterData, setFilteredData] = useState([])
     const [table, setTable] = useState(false)
@@ -27,9 +36,46 @@ export default function Filters() {
         setTable(true)
     }
 
+    const clearFunction=()=>{
+        setFrom('Starting point')
+        setTo('End point')
+        setTable(false)
+    }
 
 
     return (
+
+        <div className='filterMainDiv'>
+            <div className='filterDiv'>
+                <form className='filterForm'>
+                    <Row>
+                        <Col>
+                            <InputGroup.Text className='filterS1' variant="dark" id="inputGroup-sizing-sm">From :
+                                <Form.Select value={from} onChange={(e) => setFrom(e.target.value)}>
+                                    <option>Starting point</option>
+                                    <option value='ukkadam'>Ukkadam</option>
+                                    <option value='GH'>GH</option>
+                                    <option value="RTO">RTO</option>
+                                    <option value='gandhipuram'>Gandhipuram</option>
+                                    <option value='singanallur'>Singanallur</option>
+                                </Form.Select>
+                            </InputGroup.Text>
+                        </Col>
+                        <Col>
+                            <InputGroup.Text className='filterS1' id="inputGroup-sizing-sm">To :
+                                <Form.Select value={to} onChange={getDetails}>
+                                    <option>End Point</option>
+                                    <option value='ukkadam'>Ukkadam</option>
+                                    <option value='GH'>GH</option>
+                                    <option value="RTO">RTO</option>
+                                    <option value='gandhipuram'>Gandhipuram</option>
+                                    <option value='singanallur'>Singanallur</option>
+                                </Form.Select>
+                            </InputGroup.Text>
+                        </Col>
+                    </Row>
+                </form>
+
         <div>
              <h1 className='bus-head'>Select the Location to travel</h1>
             <form className='filterForm'>
@@ -57,7 +103,8 @@ export default function Filters() {
                 </Row>
             </form>
 
-            {/* <label>From:</label>
+
+                {/* <label>From:</label>
         <select value={from} onChange={(e)=>setFrom(e.target.value)}>
             <option value='ukkadam'>Ukkadam</option>
             <option value="GH">GH</option>
@@ -71,30 +118,56 @@ export default function Filters() {
             <option value={"RTO"}>RTO</option>
             <option value='gandhipuram'>Gandhipuram</option>
         </select><br></br> */}
-    
 
-{table && filterData.length > 0 && (
-    <table>
-        <thead>
-            <tr>
-                <th>Bus.No</th>
-                <th>Time</th>
-                <th>Start</th>
-                <th>End</th>
-            </tr>
-        </thead>
-        <tbody>
-            {filterData.sort((a, b) => a.time.localeCompare(b.time)).map((x) => (
-                <tr key={x.busno}>
-                    <td>{x.busno}</td>
-                    <td>{x.time}</td>
-                    <td>{x.from}</td>
-                    <td>{x.to}</td>
-                </tr>
-            ))}
-        </tbody>
-    </table>
-)}
+                {table && filterData.length > 0(
+                    <Table responsive striped bordered hover size='lg' variant='dark'>
+                        <thead>
+                            <tr>
+                                <th>Bus.No</th>
+                                <th>Time</th>
+                                <th>Start</th>
+                                <th>End</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                              {filterData.sort((a, b) => a.time.localeCompare(b.time)).map((x) =>
+                               (<tr key={x.busno}>
+                                <td>{x.busno}</td>
+                                <td>{x.time}</td>
+                                <td>{x.from}</td>
+                                <td>{x.to}</td>
+                            </tr>))}
+                        </tbody>
+                    </Table>
+                )}
+                {table&&<Button className='col-sm-2' variant="light" onClick={clearFunction}>
+                    Clear
+                </Button>}
+            </div
+
+// {table   && filterData.length > 0 (
+//     <table>
+//         <thead>
+//             <tr>
+//                 <th>Bus.No</th>
+//                 <th>Time</th>
+//                 <th>Start</th>
+//                 <th>End</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             {filterData.sort((a, b) => a.time.localeCompare(b.time)).map((x) => (
+//                 <tr key={x.busno}>
+//                     <td>{x.busno}</td>
+//                     <td>{x.time}</td>
+//                     <td>{x.from}</td>
+//                     <td>{x.to}</td>
+//                 </tr>
+//             ))}
+//         </tbody>
+//     </table>
+// )}
+
         </div>
     )
 }
