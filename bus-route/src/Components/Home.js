@@ -11,7 +11,7 @@ import '../Components/Home.css'
 
 import { Link, Outlet, Navigate } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-// import Login from './Login'
+import Login from './Login'
 export default function Home(props) {
   const navigate = useNavigate()
   const handleClick = (props) => {

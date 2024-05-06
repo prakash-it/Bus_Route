@@ -24,9 +24,9 @@ export default function MyNavbar() {
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav" className={mobile? 'show' : ''}>
         <Nav className="mx-auto m-2 d-flex justify-content-between">
-          <NavLink className="nav-link" to="/" onClick={() => setMobile(false)}>Home</NavLink>
-          <NavLink className="nav-link" to="/about" onClick={() => setMobile(false)}>About</NavLink>
-          <NavLink className="nav-link" to="/contact" onClick={() => setMobile(false)}>Contact</NavLink>
+          <NavLink className=" nav-link " to="/" onClick={() => setMobile(false)}>Home</NavLink>
+          <NavLink className=" nav-link " to="/about" onClick={() => setMobile(false)}>About</NavLink>
+          <NavLink className=" nav-link " to="/contact" onClick={() => setMobile(false)}>Contact</NavLink>
         </Nav>
         <Nav>
   <button style={{ backgroundColor: 'transparent', border: 'none' }}>
