@@ -15,24 +15,32 @@ import Signin from './Components/Signin';
 import Auth from './Components/Auth';
 // import Requiredauth from './Components/Requiredauth';
 import Login from './Components/Login';
-
+import Filters from './Components/Filter';
 
 
 function App() {
   return (
     <div className="App">
-      <Auth>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />}>
-          </Route>
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contect />} />
-          <Route path='/signin' element={<Signin />} />
-          <Route path='/Login' element={<Login />} />
-          <Route path='/Filter' element={<Filter/>}/>
-        </Routes>
-      </Auth>
+
+ 
+    
+    
+
+
+
+<Auth>
+ <Navbar/>
+ <Routes>
+  <Route path='/' element={<Home/>}/>
+  <Route path='/about' element={<About/>}/>
+  <Route path='/contact' element={<Contect/>}/> 
+  <Route  path='/signin' element={<Signin/>}/> 
+<Route path='/Login' element={<Login/>}/>
+<Route path='/Filter' element={<Filters/>}/>
+ </Routes>
+</Auth>
+
+
 
     </div>
   );
