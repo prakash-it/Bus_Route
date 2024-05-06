@@ -1,4 +1,13 @@
 {
+
+  "adminlogin":[
+    {
+    "id":"1g3g4",
+    "name":"DPN",
+    "email":"dpn@gmail.com",
+    "password":"12345"
+    }
+  ],
   "admin": [
     {
       "id": "18bf",
@@ -69,6 +78,13 @@
       "time": "12",
       "from": "ukkadam",
       "to": "gandhipuram"
+    },
+    {
+      "id": "33aa",
+      "busno": "",
+      "time": "",
+      "from": "select",
+      "to": "select"
     }
   ],
   "user": [
@@ -115,18 +131,6 @@
       "password": "12345"
     },
     {
-      "id": "97da",
-      "name": "Sahana",
-      "email": "sahan@gmail.com",
-      "password": "NaveenMama"
-    },
-    {
-      "id": "c1ee",
-      "name": "Sahana",
-      "email": "rithanya@gmail.com",
-      "password": "naveenmama"
-    },
-    {
       "id": "5f0d",
       "name": "vki",
       "email": "vki@gmail.com",
@@ -143,6 +147,12 @@
       "name": "welcome",
       "email": "vki@32.cp",
       "password": "323232"
+    },
+    {
+      "id": "c0e2",
+      "name": "DPN",
+      "email": "DPN@gmail.com",
+      "password": "12345"
     }
   ],
   "visitors": [
