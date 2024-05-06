@@ -32,7 +32,7 @@ export default function Home(props) {
             <div class="card">
               <img className='myImage' src={image6} alt='busImage' />
               <div class="card-body">
-                <h5 class="card-title">SETC Buses</h5>
+                <h5 class="card-title">Local Buses</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <button className='baa-baa' onClick={handleClick}>Go somewhere</button>
               </div>
@@ -42,7 +42,7 @@ export default function Home(props) {
             <div class="card">
               <img className='myImage' src={image6} alt='busImage' />
               <div class="card-body">
-                <h5 class="card-title">SETC Buses</h5>
+                <h5 class="card-title">Point to Point Buses</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <button className='baa-baa' onClick={handleClick}>Go somewhere</button>
               </div>

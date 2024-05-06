@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 
-export default function Filter() {
+export default function Filters() {
     const [from, setFrom] = useState('Select your Starting point')
     const [to, setTo] = useState('Select your Ending Point')
     const [output, setOutput] = useState([])
@@ -70,26 +70,30 @@ export default function Filter() {
             <option value={"RTO"}>RTO</option>
             <option value='gandhipuram'>Gandhipuram</option>
         </select><br></br> */}
-            {table &&
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Bus.No</th>
-                            <th>Time</th>
-                            <th>Start</th>
-                            <th>End</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {filterData.map((x) => (<tr key={x.busno}>
-                            <td>{x.busno}</td>
-                            <td>{x.time}</td>
-                            <td>{x.from}</td>
-                            <td>{x.to}</td>
-                        </tr>))}
-                    </tbody>
-                </table>
-            }
+    
+
+{table && filterData.length > 0 && (
+    <table>
+        <thead>
+            <tr>
+                <th>Bus.No</th>
+                <th>Time</th>
+                <th>Start</th>
+                <th>End</th>
+            </tr>
+        </thead>
+        <tbody>
+            {filterData.sort((a, b) => a.time.localeCompare(b.time)).map((x) => (
+                <tr key={x.busno}>
+                    <td>{x.busno}</td>
+                    <td>{x.time}</td>
+                    <td>{x.from}</td>
+                    <td>{x.to}</td>
+                </tr>
+            ))}
+        </tbody>
+    </table>
+)}
         </div>
     )
 }
