@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
   
 }
 
@@ -70,4 +71,49 @@ code {
   display: grid;
   justify-content: center;
   top: auto;
+}
+.signinDiv{
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+}
+.signinBody{
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  justify-content: center;
+}
+.signinCard{
+  width: fit-content;
+  background-image: url(./signinBackground.jpg);
+}
+.signinGreet{
+  text-align: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  align-content: center;
+}
+.signinForm{
+  color: white;
+}
+.loginFormDiv{
+  width: 400px;
+}
+.loginMainDiv{
+  display: grid;
+  justify-content: center;
+}
+.filterForm{
+  width: 500px;
+}
+.filterDiv{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.filterMainDiv{
+  display: grid;
+  justify-content: center;
+  margin: 20px;
 }

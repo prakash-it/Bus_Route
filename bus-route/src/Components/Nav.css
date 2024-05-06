@@ -70,9 +70,26 @@ button {
     display: none;
   }
 } */
+
+
+.nav-link
+{
+  color: white;
+  text-decoration: none;
+  font-size: larger;
+  font-weight: 500;
+}
 .ab
 {
   font-size: larger;
   font-weight: 600;
   text-align: center;
+
+}
+
+.bas-bas
+{
+  justify-content: space-evenly;
+  text-decoration: none;
+  color: white;
 }

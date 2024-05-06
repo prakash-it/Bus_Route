@@ -5,8 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../index.css'
-import Card  from 'react-bootstrap/Card';
-import background from '../adminCardBackground.jpg'
+
 
 
 
@@ -17,24 +16,11 @@ export default function Admin() {
     const [from, setFrom] = useState('select')
     const [to, setTo] = useState('select')
 
-
-    const storeData = () => {
-        // e.preventDefault()
-        axios.post('http://localhost:1516/admin', { busno, time, from, to })
-            .then(res => console.log(res))
-            .catch(err => console.log(err))
-
-
-    // const storeData=(e)=>{
-    //     e.preventDefault()
-    //     axios.post('http://localhost:3006/busDetails', {number, time, from, to})
-
     const storeData=()=>{
         // e.preventDefault()
         axios.post('http://localhost:1516/admin', {busno, time, from, to})
         .then(res=>console.log(res))
         .catch(err=>console.log(err))
->>>>>>>>> Temporary merge branch 2
     }
 
     return (
@@ -105,4 +91,3 @@ export default function Admin() {
         </div>
     )
 }
-

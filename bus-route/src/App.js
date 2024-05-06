@@ -5,54 +5,40 @@ import Home from './Components/Home';
 import About from './Components/About';
 import Contect from './Components/Contect';
 import Navbar from './Components/Navbar';
+
 import Filter from './Components/Filter';
-
-import Admin from './Components/Admin';
-
+// import Admin from './Components/Admin';
+// import Admintable from './Components/Admintable';
 
 import Signin from './Components/Signin';
-import Admintable from './Components/Admintable';
-import Auth from './Components/Auth';
-import Requiredauth from './Components/Requiredauth';
-import Login from './Components/Login';
 
+import Auth from './Components/Auth';
+// import Requiredauth from './Components/Requiredauth';
+import Login from './Components/Login';
+import Filters from './Components/Filter';
 
 
 function App() {
   return (
     <div className="App">
-      {/* <Navbar />
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contect />} />
-        <Route path='/signin' element={<Signin />} />
-      </Routes> */}
-      <Admin/>
+
+ 
+
 
 
 <Auth>
  <Navbar/>
-<Routes>
-  <Route path='/' element={<Home/>}>
-  </Route>
-  <Route path='/Filter' element={<Requiredauth>
-    <Filter/>
-    </Requiredauth>}/>
+ <Routes>
+  <Route path='/' element={<Home/>}/>
   <Route path='/about' element={<About/>}/>
   <Route path='/contact' element={<Contect/>}/> 
-
+  <Route  path='/signin' element={<Signin/>}/>
+  <Route path='/login' element={<Login/>}/>
  </Routes>
-
- <Admin/>
-
-
- <Admin/>
- <Signin/> 
-  <Route  path='/signin' element={<Signin/>}/> 
  {/* <Admin/>
  <Admintable/> */}
  </Auth>
+
     </div>
   );
 }
