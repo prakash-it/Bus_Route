@@ -75,4 +75,12 @@ button {
   font-size: larger;
   font-weight: 600;
   text-align: center;
+
+}
+
+.bas-bas
+{
+  justify-content: space-evenly;
+  text-decoration: none;
+  color: white;
 }

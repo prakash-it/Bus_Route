@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
   
 }
 
@@ -94,4 +95,14 @@ code {
 }
 .signinForm{
   color: white;
+}
+.loginFormDiv{
+  width: 400px;
+}
+.loginMainDiv{
+  display: grid;
+  justify-content: center;
+}
+.filterForm{
+  width: 500px;
 }
