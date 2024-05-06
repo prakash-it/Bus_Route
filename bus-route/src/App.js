@@ -26,9 +26,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}>
           </Route>
-          {/* <Route path='/Filter' element={<Requiredauth>
-            <Filter />
-          </Requiredauth>} /> */}
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contect />} />
           <Route path='/signin' element={<Signin />} />
