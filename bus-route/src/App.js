@@ -16,6 +16,7 @@ import Auth from './Components/Auth';
 // import Requiredauth from './Components/Requiredauth';
 import Login from './Components/Login';
 import Filters from './Components/Filter';
+import Admin from './Components/Admin';
 
 
 function App() {
@@ -35,10 +36,10 @@ function App() {
   <Route  path='/signin' element={<Signin/>}/>
   <Route path='/login' element={<Login/>}/>
  </Routes>
- {/* <Admin/>
- <Admintable/> */}
+ 
+ {/*   */}
  </Auth>
-
+ <Admin/>
     </div>
   );
 }
