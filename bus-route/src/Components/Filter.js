@@ -48,7 +48,10 @@ export default function Filters() {
     return (
         <div className='filterMainDiv'>
             <div className='filterDiv'>
-                <h2 className='bus-head'>welcome {auth.user}</h2>
+                <h2 className='bus-head'>welcome {auth.user} <span> <Button className='col-sm-2' variant="danger" onClick={handleLogout}>
+                    Log Out
+                </Button></span> </h2>
+               
             <h1 className='bus-head'>Select the Location to travel</h1>
                 <form className='filterForm'>
                     <Row>
@@ -83,7 +86,7 @@ export default function Filters() {
 
 
 
-            {table && filterData.length > 0 && (
+            {/* {table && filterData.length > 0 && (
     <Table responsive striped bordered hover size='lg' variant='dark'>
         <thead>
             <tr>
@@ -112,7 +115,7 @@ export default function Filters() {
             Clear
         </Button>
     </div>
-)}
+)} */}
 
 
              {/* <h1 className='bus-head'>Select the Location to travel</h1>
@@ -181,9 +184,7 @@ export default function Filters() {
                 {table&&<Button className='col-sm-2' variant="light" onClick={clearFunction}>
                     Clear
                 </Button>}
-                <Button className='col-sm-2' variant="light" onClick={handleLogout}>
-                    Log Out
-                </Button>
+                
 
 {/* // {table   && filterData.length > 0 ( */}
 {/* //     <table>
