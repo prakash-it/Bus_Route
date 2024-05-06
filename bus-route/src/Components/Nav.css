@@ -25,9 +25,6 @@
 .logo {
   font-size: 30px;
 }
-
-
-
 .nav {
   color: black;
   font-size: 20px;
@@ -70,8 +67,6 @@ button {
     display: none;
   }
 } */
-
-
 .nav-link
 {
   color: white;
@@ -86,7 +81,6 @@ button {
   text-align: center;
 
 }
-
 .bas-bas
 {
   justify-content: space-evenly;

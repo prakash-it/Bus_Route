@@ -2,38 +2,55 @@ import React, { useState } from 'react';
 
 import Logo from '../Components/Images/Logo.png'
 import '../Components/Nav.css';
+
 import { FaBars } from "react-icons/fa6";
 
-import { Navbar, Nav } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 
 import { ImCross } from "react-icons/im";
 import { NavLink } from 'react-router-dom';
 // import Logo from '../Components/Images/Logo.png';
 import '../Components/Nav.css';
+import Navbar from 'react-bootstrap/Navbar';
 
 export default function MyNavbar() {
   const [mobile, setMobile] = useState(false);
 
+  // window.onscroll = function() {myFucntion()};
+
+  // var navbar = document.getElementById('navBarMainDiv')
+  // var sticky = navbar.offsetTop;
+
+  // function myFucntion(){
+  //   if(window.pageYOffset>=sticky){
+  //     navbar.classList.add('sticky')
+  //   }else{
+  //     navbar.classList.remove('sticky')
+  //   }
+  // }
+
   return (
-    <Navbar bg="none" expand="lg" className="text-align-center">
+    <div id='navBarMainDiv'>
+    <Navbar bg="none" expand="lg" className="text-align-center navbarMain">
       <Navbar.Brand href="/" className="mr-auto">
         <img src={Logo} alt="Logo" height={70} width={70} />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setMobile(!mobile)}>
-        {mobile? <ImCross /> : <FaBars />}
+        {mobile ? <ImCross /> : <FaBars />}
       </Navbar.Toggle>
-      <Navbar.Collapse id="basic-navbar-nav" className={mobile? 'show' : ''}>
+      <Navbar.Collapse id="basic-navbar-nav" className={mobile ? 'show' : ''}>
         <Nav className="mx-auto m-2 d-flex justify-content-between">
           <NavLink className=" nav-link " to="/" onClick={() => setMobile(false)}>Home</NavLink>
           <NavLink className=" nav-link " to="/about" onClick={() => setMobile(false)}>About</NavLink>
           <NavLink className=" nav-link " to="/contact" onClick={() => setMobile(false)}>Contact</NavLink>
         </Nav>
         <Nav>
-  <button style={{ backgroundColor: 'transparent', border: 'none' }}>
-    <NavLink to="/signin" className="bas-bas nav-link" onClick={() => setMobile(false)}>Sign Up</NavLink>
-  </button>
-</Nav>
+          <button style={{ backgroundColor: 'transparent', border: 'none' }}>
+            <NavLink to="/signin" className="bas-bas nav-link" onClick={() => setMobile(false)}>Sign Up</NavLink>
+          </button>
+        </Nav>
       </Navbar.Collapse>
     </Navbar>
+    </div>
   );
 }

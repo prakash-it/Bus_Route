@@ -16,36 +16,26 @@ import Auth from './Components/Auth';
 // import Requiredauth from './Components/Requiredauth';
 import Login from './Components/Login';
 import Filters from './Components/Filter';
-import Admin from './Components/Admin';
 import AdminLogin from './Components/AdminLogin';
+import Admin from './Components/Admin';
 
 
 function App() {
   return (
     <div className="App">
-
- 
-    
-    
-
-
-
-<Auth>
- <Navbar/>
- <Routes>
-  <Route path='/' element={<Home/>}/>
-  <Route path='/about' element={<About/>}/>
-  <Route path='/contact' element={<Contect/>}/> 
-  <Route  path='/signin' element={<Signin/>}/> 
-<Route path='/Login' element={<Login/>}/>
-<Route path='/Filter' element={<Filters/>}/>
-<Route path='/Adminlogin' element={<AdminLogin/>}/>
-<Route path='/Admin' element={<Admin/>}/>
- </Routes>
-</Auth>
-
-
-
+      <Auth>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contect />} />
+          <Route path='/signin' element={<Signin />} />
+          <Route path='/Login' element={<Login />} />
+          <Route path='/Filter' element={<Filters />} />
+          <Route path='/adminlogin' element={<AdminLogin />} />
+          <Route path='/Admin' element={<Admin />} />
+        </Routes>
+      </Auth>
     </div>
   );
 }

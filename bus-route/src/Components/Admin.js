@@ -16,14 +16,11 @@ export default function Admin() {
     const [from, setFrom] = useState('select')
     const [to, setTo] = useState('select')
 
-
     const storeData=()=>{
         // e.preventDefault()
         axios.post('http://localhost:1516/admin', {busno, time, from, to})
-
         .then(res=>console.log(res))
         .catch(err=>console.log(err))
-
     }
 
     return (
