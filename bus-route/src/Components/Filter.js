@@ -31,6 +31,7 @@ export default function Filters() {
 
     return (
         <div>
+             <h1 className='bus-head'>Select the Location to travel</h1>
             <form className='filterForm'>
                 <Row>
                     <Col>

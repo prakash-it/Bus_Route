@@ -19,7 +19,8 @@ export default function Contect() {
     }
   return (
     <div className='form-container'>
-      <h2 className='form-title'>Contact Us</h2>
+      <h1 className='bus-head'>Contact Us</h1>
+    
       <form className='form' onSubmit={contact}>
         <div className='form-field'>
           <label htmlFor='name'>Name:</label>

@@ -46,6 +46,7 @@ export default function Login(props) {
     }
     return (
         <div className='loginMainDiv '>
+             <h1 className='bus-head'>Login to Access</h1>
             <form className='loginFormDiv col-lg col-sm'>
                 {/* <label>Email:</label>
             <input type='email' value={email} onChange={(e)=>{setEmail(e.target.value)}}/>

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -9,43 +9,45 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import '../index.css'
 
 export default function Signin() {
-    const[name,setName]=useState('')
-    const[email,setEmail]=useState('')
-    const[password,setPassword]=useState('')
-    const navigate=useNavigate()
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const navigate = useNavigate()
 
-    const handlesigin=()=>{
-        axios.post(`http://localhost:1516/user`,{name,email,password})
-        .then(res=>console.log(res))
-        .catch(err=>console.log(err))
-        navigate('/Login')
-    }
-    // const handlelog=()=>{
-    //   navigate('/Login')
-    // }
+  const handlesigin = () => {
+    axios.post(`http://localhost:1516/user`, { name, email, password })
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+    navigate('/Login')
+  }
+  // const handlelog=()=>{
+  //   navigate('/Login')
+  // }
   return (
+
     <div className='signinDiv'>
+      <h1 className='bus-head'>Signup with our servers</h1>
       <form onSubmit={handlesigin}>
-      <FloatingLabel
-        controlId="floatingInput"
-        label="Name"
-        className="mb-4"
-      >
-        <Form.Control type="text" placeholder="your full name" value={name} onChange={(e)=>{setName(e.target.value)}}/>
-      </FloatingLabel>
-      <FloatingLabel
-        controlId="floatingInput"
-        label="Email address"
-        className="mb-4"
-      >
-        <Form.Control type="email" placeholder="name@example.com" value={email} onChange={(e)=>{setEmail(e.target.value)}} />
-      </FloatingLabel>
-      <FloatingLabel controlId="floatingPassword" label="Password">
-        <Form.Control type="password" placeholder="Password" value={password} onChange={(e)=>{setPassword(e.target.value)}} />
-      </FloatingLabel><br></br>
-      <Button variant="primary" type='submit'>
-        Sign Up
-      </Button>
+        <FloatingLabel
+          controlId="floatingInput"
+          label="Name"
+          className="mb-4"
+        >
+          <Form.Control type="text" placeholder="your full name" value={name} onChange={(e) => { setName(e.target.value) }} />
+        </FloatingLabel>
+        <FloatingLabel
+          controlId="floatingInput"
+          label="Email address"
+          className="mb-4"
+        >
+          <Form.Control type="email" placeholder="name@example.com" value={email} onChange={(e) => { setEmail(e.target.value) }} />
+        </FloatingLabel>
+        <FloatingLabel controlId="floatingPassword" label="Password">
+          <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => { setPassword(e.target.value) }} />
+        </FloatingLabel><br></br>
+        <Button variant="primary" type='submit'>
+          Sign Up
+        </Button>
       </form>
 
       {/* <Card className='signinCard'>
@@ -74,8 +76,8 @@ export default function Signin() {
         Login
       </Button> */}
 
-        
-            {/* <label>Name:</label>
+
+      {/* <label>Name:</label>
             <input type='text' value={name} onChange={(e)=>{setName(e.target.value)}}/>
             <label>Email:</label>
             <input type='email' value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
@@ -86,7 +88,7 @@ export default function Signin() {
         <h2>Alreday have a Account?</h2>
         <button onClick={handlelog}>Login</button> */}
 
-        {/* </form>
+      {/* </form>
 
         
         </form>

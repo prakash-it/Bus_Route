@@ -1,15 +1,15 @@
 import React from 'react'
 import image1 from '../img1.jpg'
+
 import '../Components/Nav.css'
 import { Col, Container, Row } from 'react-bootstrap'
 
 export default function About() {
   return (
     <div>
-      <div className='ab'>ABOUT US</div>
-
+      <h1 className='bus-head'>ABOUT US</h1>
      
-      <Container style={{ marginTop: '20px' }}>
+      <Container style={{ marginTop: '10px' }}>
         <Row>
           <Col>
             <h1> Dhivakar</h1>
@@ -24,7 +24,7 @@ export default function About() {
           </Col>
           <Col>
             <div className='d-none d-md-block'>
-              <img className='myImage' width={80} height={100} src={image1} alt='busImage' />
+              <img className='myImage' width={60} height={90} src={image1} alt='busImage' />
             </div>
           </Col>
         </Row>
