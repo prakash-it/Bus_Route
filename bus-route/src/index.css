@@ -117,3 +117,21 @@ code {
   justify-content: center;
   margin: 20px;
 }
+.adminBtn{
+  margin-left: 5px;
+}
+.adminPageDiv{
+  display: grid;
+  justify-content: center;
+  margin-top: 20px;
+}
+.adminForm{
+  width: 400px;
+}
+.adminLoginBtn2{
+  margin-left: 10px;
+  margin-top: 8px;
+}
+.adminLoginBtn1{
+  margin-top: 8px;
+}

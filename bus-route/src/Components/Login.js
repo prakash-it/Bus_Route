@@ -44,6 +44,11 @@ export default function Login(props) {
     const handlelogout = () => {
         setIslogged(false)
     }
+
+ const Adminlogin=()=>
+    {
+        navigate('/AdminLogin')
+    }
     return (
         <div className='loginMainDiv '>
              <h1 className='bus-head'>Login to Access</h1>
@@ -68,7 +73,11 @@ export default function Login(props) {
                     Log Out
                 </Button>:<Button variant="primary" onClick={handlelogin}>
                     Log In
-                </Button>}
+                </Button>}  
+                {/* <button onClick={Adminlogin}>Admin user login</button> */}
+                <Button className='adminBtn' variant="primary" onClick={Adminlogin}>
+                    Admin Login
+                </Button>
                 {errmsg}
             </form>
         </div>

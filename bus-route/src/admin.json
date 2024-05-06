@@ -1,4 +1,12 @@
 {
+  "adminlogin": [
+    {
+      "id": "1g3g4",
+      "name": "DPN",
+      "email": "dpn@gmail.com",
+      "password": "12345"
+    }
+  ],
   "admin": [
     {
       "id": "18bf",
@@ -69,13 +77,6 @@
       "time": "12",
       "from": "ukkadam",
       "to": "gandhipuram"
-    },
-    {
-      "id": "2964",
-      "busno": "121r",
-      "time": "18:00",
-      "from": "annur",
-      "to": "thudiayalur"
     }
   ],
   "user": [
@@ -120,6 +121,100 @@
       "name": "ghsad",
       "email": "sdfnln@gmail.com",
       "password": "12345"
+    },
+    {
+      "id": "97da",
+      "name": "Sahana",
+      "email": "sahan@gmail.com",
+      "password": "NaveenMama"
+    },
+    {
+      "id": "c1ee",
+      "name": "Sahana",
+      "email": "rithanya@gmail.com",
+      "password": "naveenmama"
+    },
+    {
+      "id": "5f0d",
+      "name": "vki",
+      "email": "vki@gmail.com",
+      "password": "232323"
+    },
+    {
+      "id": "acf0",
+      "name": "welcome",
+      "email": "wel@gmail.com",
+      "password": "343434"
+    },
+    {
+      "id": "8a4a",
+      "name": "welcome",
+      "email": "vki@32.cp",
+      "password": "323232"
+    },
+    {
+      "id": "dccc",
+      "name": "Hema lakshmi",
+      "email": "hema@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "visitors": [
+    {
+      "id": "d2f4",
+      "names": "PC",
+      "emial": "pc@gmail.com",
+      "number": "9891655045",
+      "msg": "hi lvu"
+    },
+    {
+      "id": "8c8a",
+      "name": "plc",
+      "email": "plc@gmail.com",
+      "number": "9876543210",
+      "msg": "hi luv 2"
+    },
+    {
+      "id": "6de3",
+      "name": "clp",
+      "email": "clp@gmail.com",
+      "number": "8765432190",
+      "msg": "hi luv11"
+    },
+    {
+      "id": "9a99",
+      "name": "clp",
+      "email": "clp@gmail.com",
+      "number": "8765432190",
+      "msg": "hi luv11"
+    },
+    {
+      "id": "148b",
+      "name": "clp",
+      "email": "clp@gmail.com",
+      "number": "8765432190",
+      "msg": "hi luv11"
+    },
+    {
+      "id": "fa25",
+      "name": "clp",
+      "email": "clp@gmail.com",
+      "number": "8765432190",
+      "msg": "hi luv11"
+    },
+    {
+      "id": "d9dd",
+      "name": "clp",
+      "email": "clp@gmail.com",
+      "number": "8765432190",
+      "msg": "hi luv11"
+    },
+    {
+      "id": "6ee0",
+      "name": "jkhb ",
+      "email": "jbgvjfyjgvh@gmail.com",
+      "number": "876543234567",
+      "msg": "kjhgfxdcv bnm,"
     }
   ]
 }

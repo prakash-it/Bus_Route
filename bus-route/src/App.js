@@ -16,7 +16,7 @@ import Auth from './Components/Auth';
 // import Requiredauth from './Components/Requiredauth';
 import Login from './Components/Login';
 import Filters from './Components/Filter';
-import Admin from './Components/Admin';
+import AdminLogin from './Components/AdminLogin';
 
 
 function App() {
@@ -33,13 +33,12 @@ function App() {
   <Route path='/' element={<Home/>}/>
   <Route path='/about' element={<About/>}/>
   <Route path='/contact' element={<Contect/>}/> 
-  <Route  path='/signin' element={<Signin/>}/>
-  <Route path='/login' element={<Login/>}/>
+  <Route  path='/signin' element={<Signin/>}/> 
+<Route path='/Login' element={<Login/>}/>
+<Route path='/Filter' element={<Filters/>}/>
+<Route path='/adminlogin' element={<AdminLogin/>}/>
  </Routes>
- 
- {/*   */}
  </Auth>
- <Admin/>
     </div>
   );
 }
