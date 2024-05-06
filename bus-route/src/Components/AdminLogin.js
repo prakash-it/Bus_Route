@@ -2,6 +2,9 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from './Auth'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+
 
 export default function AdminLogin() {
     const [email, setEmail] = useState('')
@@ -41,8 +44,14 @@ export default function AdminLogin() {
         <div>
             <input type='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter the mail'/>
             <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Enter the password'/>
-            <button onClick={handlelogin}>Admin Login</button>
-            <button onClick={userlogin}>User Admin</button>
+            {/* <button onClick={handlelogin}>Admin Login</button>
+            <button onClick={userlogin}>User Admin</button> */}
+            <Button className='col-sm-2' variant="success" onClick={handlelogin}>
+                    Log In
+                </Button>
+            <Button className='col-sm-2' variant="danger" onClick={userlogin}>
+                    Log out
+                </Button>
 
             {errmsg}
         </div>
