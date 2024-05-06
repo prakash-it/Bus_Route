@@ -70,6 +70,13 @@ button {
     display: none;
   }
 } */
+
+
+.nav-link
+{
+  color: white;
+  text-decoration: none;
+}
 .ab
 {
   font-size: larger;

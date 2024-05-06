@@ -85,7 +85,12 @@ export default function Signin() {
         
         <h2>Alreday have a Account?</h2>
         <button onClick={handlelog}>Login</button> */}
+
         {/* </form>
+
+        
+        </form>
+
         </Card.Body>
     </Card> */}
     </div>
