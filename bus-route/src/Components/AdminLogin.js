@@ -34,7 +34,7 @@ export default function AdminLogin() {
                 setErrmsg("Incorrect Password")
             }
         } else {
-            setErrmsg("User not Found")
+            setErrmsg("Your not An Admin")
         }
     }
 
