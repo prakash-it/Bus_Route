@@ -75,7 +75,7 @@ export default function Login(props) {
                     Log In
                 </Button>}  
                 {/* <button onClick={Adminlogin}>Admin user login</button> */}
-                <Button variant="primary" onClick={Adminlogin}>
+                <Button className='adminBtn' variant="primary" onClick={Adminlogin}>
                     Admin Login
                 </Button>
                 {errmsg}
