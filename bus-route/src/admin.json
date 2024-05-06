@@ -119,6 +119,12 @@
       "name": "Sahana",
       "email": "sahan@gmail.com",
       "password": "NaveenMama"
+    },
+    {
+      "id": "c1ee",
+      "name": "Sahana",
+      "email": "rithanya@gmail.com",
+      "password": "naveenmama"
     }
   ]
 }
