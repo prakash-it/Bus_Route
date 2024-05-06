@@ -7,6 +7,8 @@ import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
+import { useAuth } from './Auth';
+import {useNavigate} from 'react-router-dom'
 
 
 
@@ -14,13 +16,11 @@ export default function Filter() {
     const [from, setFrom] = useState('Starting point')
     const [to, setTo] = useState('Ending Point')
 
-export default function Filters() {
-    const [from, setFrom] = useState('Select your Starting point')
-    const [to, setTo] = useState('Select your Ending Point')
-
     const [output, setOutput] = useState([])
     const [filterData, setFilteredData] = useState([])
     const [table, setTable] = useState(false)
+    const auth =useAuth()
+    const navigate = useNavigate()
 
 
     useEffect(() => {
@@ -41,12 +41,17 @@ export default function Filters() {
         setTo('End point')
         setTable(false)
     }
+    const handleLogout=()=>{
+        auth.Logout()
+        navigate('/')        
+    }
 
 
     return (
-
         <div className='filterMainDiv'>
             <div className='filterDiv'>
+                <h2 className='bus-head'>welcome {auth.user}</h2>
+            <h1 className='bus-head'>Select the Location to travel</h1>
                 <form className='filterForm'>
                     <Row>
                         <Col>
@@ -76,8 +81,7 @@ export default function Filters() {
                     </Row>
                 </form>
 
-        <div>
-             <h1 className='bus-head'>Select the Location to travel</h1>
+             {/* <h1 className='bus-head'>Select the Location to travel</h1>
             <form className='filterForm'>
                 <Row>
                     <Col>
@@ -101,7 +105,7 @@ export default function Filters() {
                         </Form.Select>
                     </Col>
                 </Row>
-            </form>
+            </form> */}
 
 
                 {/* <label>From:</label>
@@ -119,7 +123,7 @@ export default function Filters() {
             <option value='gandhipuram'>Gandhipuram</option>
         </select><br></br> */}
 
-                {table && filterData.length > 0(
+                {table && filterData.length > 0&&(
                     <Table responsive striped bordered hover size='lg' variant='dark'>
                         <thead>
                             <tr>
@@ -143,10 +147,12 @@ export default function Filters() {
                 {table&&<Button className='col-sm-2' variant="light" onClick={clearFunction}>
                     Clear
                 </Button>}
-            </div
+                <Button className='col-sm-2' variant="light" onClick={handleLogout}>
+                    Log Out
+                </Button>
 
-// {table   && filterData.length > 0 (
-//     <table>
+{/* // {table   && filterData.length > 0 ( */}
+{/* //     <table>
 //         <thead>
 //             <tr>
 //                 <th>Bus.No</th>
@@ -155,9 +161,9 @@ export default function Filters() {
 //                 <th>End</th>
 //             </tr>
 //         </thead>
-//         <tbody>
-//             {filterData.sort((a, b) => a.time.localeCompare(b.time)).map((x) => (
-//                 <tr key={x.busno}>
+//         <tbody> */}
+{/* //             {filterData.sort((a, b) => a.time.localeCompare(b.time)).map((x) => ( */}
+{/* //                 <tr key={x.busno}>
 //                     <td>{x.busno}</td>
 //                     <td>{x.time}</td>
 //                     <td>{x.from}</td>
@@ -166,10 +172,8 @@ export default function Filters() {
 //             ))}
 //         </tbody>
 //     </table>
-// )}
-
+// )} */}
+        </div>
         </div>
     )
 }
-
-

@@ -115,18 +115,6 @@
       "password": "12345"
     },
     {
-      "id": "97da",
-      "name": "Sahana",
-      "email": "sahan@gmail.com",
-      "password": "NaveenMama"
-    },
-    {
-      "id": "c1ee",
-      "name": "Sahana",
-      "email": "rithanya@gmail.com",
-      "password": "naveenmama"
-    },
-    {
       "id": "5f0d",
       "name": "vki",
       "email": "vki@gmail.com",
@@ -143,6 +131,12 @@
       "name": "welcome",
       "email": "vki@32.cp",
       "password": "323232"
+    },
+    {
+      "id": "afd6",
+      "name": "manoj",
+      "email": "manoj123@gmail.com",
+      "password": "1234"
     }
   ],
   "visitors": [
