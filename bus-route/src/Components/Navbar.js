@@ -6,6 +6,10 @@
 import React, { useState } from 'react';
 import Logo from '../Components/Images/Logo.png'
 import '../Components/Nav.css';
+<<<<<<< HEAD
+=======
+
+>>>>>>> f16301af7179705812135e04b5519b7dfe201464
 import { FaBars } from "react-icons/fa6";
 
 import { Navbar, Nav } from 'react-bootstrap';

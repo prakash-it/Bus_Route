@@ -21,16 +21,24 @@ import Login from './Components/Login';
 function App() {
   return (
     <div className="App">
+      {/* <Navbar />
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contect />} />
+        <Route path='/signin' element={<Signin />} />
+      </Routes> */}
+      <Admin/>
 
 
-    {/* <Navbar/>
-
-
-
-      {/* <Navbar/>
-
- <Routes>
-  <Route path='/' element={<Home/>}/>
+<Auth>
+ <Navbar/>
+<Routes>
+  <Route path='/' element={<Home/>}>
+  </Route>
+  <Route path='/Filter' element={<Requiredauth>
+    <Filter/>
+    </Requiredauth>}/>
   <Route path='/about' element={<About/>}/>
   <Route path='/contact' element={<Contect/>}/> 
 
@@ -42,22 +50,9 @@ function App() {
  <Admin/>
  <Signin/> 
   <Route  path='/signin' element={<Signin/>}/> 
- </Routes>
-
- <Signin/> */}
-
-
-  
-  <Admin/>
-
-  
- <Admintable/>
-
-
-
- <Filter/>
-
-
+ {/* <Admin/>
+ <Admintable/> */}
+ </Auth>
     </div>
   );
 }
