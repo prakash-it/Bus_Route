@@ -96,3 +96,13 @@ code {
 .signinForm{
   color: white;
 }
+.loginFormDiv{
+  width: 400px;
+}
+.loginMainDiv{
+  display: grid;
+  justify-content: center;
+}
+.filterForm{
+  width: 500px;
+}

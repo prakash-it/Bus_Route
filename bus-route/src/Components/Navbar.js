@@ -30,7 +30,7 @@ export default function MyNavbar() {
         </Nav>
         <Nav>
   <button style={{ backgroundColor: 'transparent', border: 'none' }}>
-    <NavLink to="/signin" className="bas-bas" onClick={() => setMobile(false)}>SignIn</NavLink>
+    <NavLink to="/signin" className="bas-bas" onClick={() => setMobile(false)}>Sign Up</NavLink>
   </button>
 </Nav>
       </Navbar.Collapse>
