@@ -12,10 +12,11 @@ import { NavLink } from 'react-router-dom';
 // import Logo from '../Components/Images/Logo.png';
 import '../Components/Nav.css';
 import Navbar from 'react-bootstrap/Navbar';
+import  { useAuth } from './Auth';
 
 export default function MyNavbar() {
   const [mobile, setMobile] = useState(false);
-
+  const auth =useAuth()
   // window.onscroll = function() {myFucntion()};
 
   // var navbar = document.getElementById('navBarMainDiv')
@@ -45,6 +46,7 @@ export default function MyNavbar() {
           <NavLink className=" nav-link " to="/contact" onClick={() => setMobile(false)}>Contact</NavLink>
         </Nav>
         <Nav>
+          <NavLink className="nav-link " to="/profile" onClick={()=>setMobile(false)}>{auth.user}</NavLink>
           <button style={{ backgroundColor: 'transparent', border: 'none' }}>
             <NavLink to="/signin" className="bas-bas nav-link" onClick={() => setMobile(false)}>Sign Up</NavLink>
           </button>

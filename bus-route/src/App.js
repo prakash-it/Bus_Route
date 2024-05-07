@@ -6,7 +6,7 @@ import About from './Components/About';
 import Contect from './Components/Contect';
 import Navbar from './Components/Navbar';
 
-import Filter from './Components/Filter';
+
 // import Admin from './Components/Admin';
 // import Admintable from './Components/Admintable';
 
@@ -18,6 +18,8 @@ import Login from './Components/Login';
 import Filters from './Components/Filter';
 import AdminLogin from './Components/AdminLogin';
 import Admin from './Components/Admin';
+import Profil from './Components/Profil';
+import Filter2 from './Components/Filter2';
 
 
 function App() {
@@ -32,11 +34,16 @@ function App() {
           <Route path='/signin' element={<Signin />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/Filter' element={<Filters />} />
+          <Route path='/Filter2' element={<Filter2/>}/>
           <Route path='/adminlogin' element={<AdminLogin />} />
           <Route path='/Admin' element={<Admin />} />
+          <Route path='/profile' element={<Profil/>}/>
         </Routes>
       </Auth>
+
+     
     </div>
+
   );
 }
 

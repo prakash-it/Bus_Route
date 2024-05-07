@@ -79,6 +79,53 @@
       "to": "gandhipuram"
     }
   ],
+  "admin2": [
+    {
+      "id": "1fg67",
+      "busno": "24",
+      "time": "4:00",
+      "from": "Salem",
+      "to": "coimbatore"
+    },
+    {
+      "id": "5g67",
+      "busno": "4",
+      "time": "9:00",
+      "from": "Salem",
+      "to": "coimbatore"
+    },
+    {
+      
+      "id": "4gghj",
+      "busno": "45",
+      "time": "2:00",
+      "from": "coimbatore",
+      "to": "Salem"
+    },
+    {
+      "id": "9i0j",
+      "busno": "45",
+      "time": "4:00",
+      "from": "karur",
+      "to": "Salem"
+    },
+    {
+    
+      "id": "675hg",
+      "busno": "145",
+      "time": "8:00",
+      "from": "karur",
+      "to": "Salem"
+    },
+    {
+      
+      "id": "67hhg",
+      "busno": "145",
+      "time": "10:00",
+      "from": "coimbatore",
+      "to": "Salem"
+    }
+  ],
   "user": [
     {
       "name": "Adam",
@@ -157,6 +204,12 @@
       "name": "Hema lakshmi",
       "email": "hema@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "659c",
+      "name": "pc",
+      "email": "pc1516@gmail.com",
+      "password": "151678"
     }
   ],
   "visitors": [
