@@ -38,20 +38,12 @@ export default function Filter2() {
         setTo('End point')
         setTable(false)
     }
-    const handleLogout=()=>{
-        auth.Logout()
-        navigate('/')        
-    }
-
+  
 
     return (
         <div className='filterMainDiv'>
             <div className='filterDiv'>
-                <h2 className='bus-head'>welcome to point to point serves 
-                {/* {auth.user}
-                 <span> <Button className='col-sm-2' variant="danger" onClick={handleLogout}>Log Out</Button></span> */}
-
-                  </h2>                
+                <h2 className='bus-head'>welcome to point to point serves </h2>                
             <h1 className='bus-head'>Select the Location to travel</h1>
                 <form className='filterForm'>
                     <Row>

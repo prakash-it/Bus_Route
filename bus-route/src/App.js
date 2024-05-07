@@ -20,6 +20,7 @@ import AdminLogin from './Components/AdminLogin';
 import Admin from './Components/Admin';
 import Profil from './Components/Profil';
 import Filter2 from './Components/Filter2';
+import Login2 from './Components/Login2';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path='/contact' element={<Contect />} />
           <Route path='/signin' element={<Signin />} />
           <Route path='/Login' element={<Login />} />
+          <Route path='/Login2' element={<Login2/>}/> 
           <Route path='/Filter' element={<Filters />} />
           <Route path='/Filter2' element={<Filter2/>}/>
           <Route path='/adminlogin' element={<AdminLogin />} />

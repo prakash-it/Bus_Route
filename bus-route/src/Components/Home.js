@@ -1,11 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
-
 import image6 from '../img6.jpg'
-
-
-
 import '../index.css'
 import '../Components/Home.css'
 
@@ -27,9 +22,9 @@ const handleClick2 = (props) => {
 console.log("click");
   if (props.islogged) {
       navigate2('/Filter2');
-      console.log("hey");
+     
   } else {
-      navigate2('/Login');
+      navigate2('/Login2');
   }
 };
 
