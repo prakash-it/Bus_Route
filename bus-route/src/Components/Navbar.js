@@ -46,9 +46,11 @@ export default function MyNavbar() {
           <NavLink className=" nav-link " to="/contact" onClick={() => setMobile(false)}>Contact</NavLink>
         </Nav>
         <Nav>
-          <NavLink className="nav-link " to="/profile" onClick={()=>setMobile(false)}>{auth.user}</NavLink>
           <button style={{ backgroundColor: 'transparent', border: 'none' }}>
-            <NavLink to="/signin" className="bas-bas nav-link" onClick={() => setMobile(false)}>Sign Up</NavLink>
+            {!auth.user?<NavLink to="/signin" className="bas-bas nav-link" onClick={() => setMobile(false)}>Sign Up</NavLink>:<div>
+            <NavLink className="nav-link " to="/profile" onClick={()=>setMobile(false)}>{auth.user}</NavLink><span><NavLink className='nav-link' to="/Admin" onClick={()=>setMobile(false)}>Update</NavLink></span>
+              </div>}
+            {/* {!auth.user?<NavLink to="/signin" className="bas-bas nav-link" onClick={() => setMobile(false)}>Sign Up</NavLink>:<NavLink className="nav-link " to="/profile" onClick={()=>setMobile(false)}>{auth.user}</NavLink>} */}
           </button>
         </Nav>
       </Navbar.Collapse>
