@@ -21,6 +21,7 @@ import Admin from './Components/Admin';
 import Profil from './Components/Profil';
 import Filter2 from './Components/Filter2';
 import Login2 from './Components/Login2';
+import AdminTable from './Components/Admintable';
 
 
 function App() {
@@ -41,9 +42,7 @@ function App() {
           <Route path='/Admin' element={<Admin />} />
           <Route path='/profile' element={<Profil/>}/>
         </Routes>
-      </Auth>
-
-     
+      </Auth>     
     </div>
 
   );

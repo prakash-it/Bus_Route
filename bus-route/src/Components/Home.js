@@ -4,15 +4,18 @@ import image6 from '../img6.jpg'
 import '../index.css'
 import '../Components/Home.css'
 
+
 // import { Link, Outlet, Navigate } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from './Auth'
 // import Login from './Login'
 export default function Home(props) {
+  const auth= useAuth()
   const navigate = useNavigate()
   const navigate2= useNavigate()
   const handleClick = (props) => {
     console.log("button click");
-    if (props.islogged) {
+    if (auth.user) {
         navigate('/Filter');
     } else {
         navigate('/Login');
@@ -20,7 +23,7 @@ export default function Home(props) {
 };
 const handleClick2 = (props) => {
 console.log("click");
-  if (props.islogged) {
+  if (auth.user) {
       navigate2('/Filter2');
      
   } else {
@@ -30,7 +33,7 @@ console.log("click");
 
 const handleClick3 = (props) => {
 
-  if (props.islogged) {
+  if (auth.user) {
       navigate('/Filter3');
   } else {
       navigate('/Login');
