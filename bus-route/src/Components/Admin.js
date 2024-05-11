@@ -92,7 +92,6 @@ export default function Admin() {
                             Submit
                         </Button>
                     </Form>
-                    <AdminTable/>
         </div>
         </div>
     )

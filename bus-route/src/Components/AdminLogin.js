@@ -30,7 +30,7 @@ export default function AdminLogin(props) {
         if (user) {
             if (user.password === password) {
                adminAuth.Login(user.name)
-                navigate('/Admin')
+                navigate('/')
             } else {
                 setErrmsg("Incorrect Password")
             }

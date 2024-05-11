@@ -9,13 +9,6 @@
   ],
   "admin": [
     {
-      "id": "18bf",
-      "busno": "45",
-      "time": "4:00",
-      "from": "singanallur",
-      "to": "gandhipuram"
-    },
-    {
       "id": "2a68",
       "busno": "65",
       "time": "5:00",

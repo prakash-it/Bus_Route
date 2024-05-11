@@ -13,24 +13,21 @@ import { NavLink } from 'react-router-dom';
 import '../Components/Nav.css';
 import Navbar from 'react-bootstrap/Navbar';
 import  { useAuth } from './Auth';
+import Admin from './Admin';
 
 export default function MyNavbar() {
   const [mobile, setMobile] = useState(false);
   const auth =useAuth()
-  // window.onscroll = function() {myFucntion()};
 
-  // var navbar = document.getElementById('navBarMainDiv')
-  // var sticky = navbar.offsetTop;
+  window.addEventListener("scroll", function(){
+    var header = document.querySelector('#navBarMainDiv')
+    header.classList.toggle('sticky',this.window.scrollY>0);
+  })
 
-  // function myFucntion(){
-  //   if(window.pageYOffset>=sticky){
-  //     navbar.classList.add('sticky')
-  //   }else{
-  //     navbar.classList.remove('sticky')
-  //   }
-  // }
+
 
   return (
+    <div>
     <div id='navBarMainDiv'>
     <Navbar bg="none" expand="lg" className="text-align-center navbarMain">
       <Navbar.Brand href="/" className="mr-auto">
@@ -44,17 +41,18 @@ export default function MyNavbar() {
           <NavLink className=" nav-link " to="/" onClick={() => setMobile(false)}>Home</NavLink>
           <NavLink className=" nav-link " to="/about" onClick={() => setMobile(false)}>About</NavLink>
           <NavLink className=" nav-link " to="/contact" onClick={() => setMobile(false)}>Contact</NavLink>
+          {auth.user==='Admin'&&<div className='adminNavDiv'><NavLink className='nav-link' to="/adminTable" onClick={()=>setMobile(false)}>Update</NavLink><NavLink className='nav-link' to="/Admin" onClick={()=>setMobile(false)}>Add Data</NavLink></div>}
         </Nav>
         <Nav>
           <button style={{ backgroundColor: 'transparent', border: 'none' }}>
-            {!auth.user?<NavLink to="/signin" className="bas-bas nav-link" onClick={() => setMobile(false)}>Sign Up</NavLink>:<div>
-            <NavLink className="nav-link " to="/profile" onClick={()=>setMobile(false)}>{auth.user}</NavLink><span><NavLink className='nav-link' to="/Admin" onClick={()=>setMobile(false)}>Update</NavLink></span>
+            {!auth.user?<NavLink to="/signin" className="bas-bas nav-link" onClick={() => setMobile(false)}>Sign Up</NavLink>:<div> <NavLink className="nav-link " to="/profile" onClick={()=>setMobile(false)}>{`Welcome ${auth.user}`}</NavLink>
               </div>}
             {/* {!auth.user?<NavLink to="/signin" className="bas-bas nav-link" onClick={() => setMobile(false)}>Sign Up</NavLink>:<NavLink className="nav-link " to="/profile" onClick={()=>setMobile(false)}>{auth.user}</NavLink>} */}
           </button>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+    </div>
     </div>
   );
 }

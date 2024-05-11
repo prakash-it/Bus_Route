@@ -135,3 +135,29 @@ code {
 .adminLoginBtn1{
   margin-top: 8px;
 }
+.adminTableDiv{
+  width: 500px;
+  height: fit-content;
+}
+.adminTableUpdate{
+  width: 500px;
+  height: fit-content;
+}
+.adminTableDiv h1{
+  text-align: center;
+}
+.adminTableMainDiv{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 5px;
+}
+.adminFormBtn{
+  display: flex;
+  gap: 4px;
+  margin: 10px;
+}
+.adminTableBtn{
+  display: grid;
+  gap: 2px;
+}
