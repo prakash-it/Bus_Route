@@ -48,9 +48,7 @@ export default function Filters() {
     return (
         <div className='filterMainDiv'>
             <div className='filterDiv'>
-                <h2 className='bus-head'>welcome {auth.user} <span> <Button className='col-sm-2' variant="danger" onClick={handleLogout}>
-                    Log Out
-                </Button></span> </h2>
+                <h2 className='bus-head'>welcome {auth.user}</h2>
                
             <h1 className='bus-head'>Select the Location to travel</h1>
                 <form className='filterForm'>

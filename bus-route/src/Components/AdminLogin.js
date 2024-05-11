@@ -9,12 +9,13 @@ import '../index.css'
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
 
-export default function AdminLogin() {
+export default function AdminLogin(props) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [userlist, setUserlist] = useState([])
     const [errmsg, setErrmsg] = useState('')
     const navigate = useNavigate()
+    const adminAuth = useAuth()
 
 
     useEffect(() => {
@@ -28,8 +29,8 @@ export default function AdminLogin() {
         const user = userlist.find(x => x.email === email)
         if (user) {
             if (user.password === password) {
-
-                navigate('/Admin')
+               adminAuth.Login(user.name)
+                navigate('/')
             } else {
                 setErrmsg("Incorrect Password")
             }
@@ -38,9 +39,7 @@ export default function AdminLogin() {
         }
     }
 
-    const userlogin = () => {
-        navigate('/Login')
-    }
+    
 
 
     return (
@@ -77,9 +76,6 @@ export default function AdminLogin() {
                 </Form.Group> */}
                 <Button className='col-sm-4 adminLoginBtn1' variant="success" onClick={handlelogin}>
                     Log In
-                </Button>
-                <Button className='col-sm-4 adminLoginBtn2' variant="danger" onClick={userlogin}>
-                    Log out
                 </Button>
             </Form>
             {errmsg}

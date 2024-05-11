@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import '../index.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from 'react-bootstrap/Table';
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button';
 
 export default function AdminTable() {
     const [admin, setAdmin] = useState([]);
@@ -61,9 +66,10 @@ export default function AdminTable() {
     };
 
     return (
-        <div>
+        <div className='adminTableMainDiv'>
+            <div className='adminTableDiv'>
             <h1>Admin Table Page</h1>
-            <table>
+            <Table variant='dark'>
                 <thead>
                     <tr>
                         {/* <th>Id</th> */}
@@ -83,19 +89,40 @@ export default function AdminTable() {
                             <td>{adminData.from}</td>
                             <td>{adminData.to}</td>
                             <td>
-                                <button onClick={() => openPopup(adminData)}>Update</button>
-                                <button onClick={() => handleDelete(adminData.id)}>Delete</button>
+                            <div className='adminTableBtn'>
+                                <Button variant="success" onClick={() => openPopup(adminData)}>Update</Button>
+                                <Button variant="danger" onClick={() => handleDelete(adminData.id)}>Delete</Button>
+                            </div>
+                                {/* <button onClick={() => openPopup(adminData)}>Update</button>
+                                <button onClick={() => handleDelete(adminData.id)}>Delete</button> */}
                             </td>
                         </tr>
                     ))}
                 </tbody>
-            </table>
+            </Table>
+            </div>
 
             {/* Update Popup */}
             {popup &&
-                <div className="popup">
-                    <div className="popup-inner">
+                <div>
+                    <div className='adminTableUpdate'>
+                        <Form variant='dark'>
                         <h2>Update Admin Data</h2>
+                        <Form.Label>Bus No:</Form.Label>
+                        <Form.Control type="text" value={busno} onChange={(e) => setBusno(e.target.value)}/>
+                        <Form.Label>Timing:</Form.Label>
+                        <Form.Control type="text" value={time} onChange={(e) => setTime(e.target.value)}/>
+                        <Form.Label>From:</Form.Label>
+                        <Form.Control type="text" value={from} onChange={(e) => setFrom(e.target.value)}/>
+                        <Form.Label>To:</Form.Label>
+                        <Form.Control type="text" value={to} onChange={(e) => setTo(e.target.value)}/>
+                        <div className='adminFormBtn'>
+                        <Button variant="warning" onClick={handleUpdate}>Update</Button>
+                        <Button variant="danger" onClick={() => setPopup(false)}>Cancel</Button>
+                        </div>
+                        
+
+                        {/* <h2>Update Admin Data</h2>
                         <label>Bus No:</label>
                         <input type="text" value={busno} onChange={(e) => setBusno(e.target.value)} />
                         <label>Timing:</label>
@@ -105,7 +132,8 @@ export default function AdminTable() {
                         <label>To:</label>
                         <input type="text" value={to} onChange={(e) => setTo(e.target.value)} />
                         <button onClick={handleUpdate}>Update</button>
-                        <button onClick={() => setPopup(false)}>Cancel</button>
+                        <button onClick={() => setPopup(false)}>Cancel</button> */}
+                        </Form>
                     </div>
                 </div>
             }
