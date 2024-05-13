@@ -24,10 +24,6 @@ export default function Admin() {
         .catch(err=>console.log(err))
     }
 
-    const userlogin = () => {
-        navigate('/')
-    }
-
     return (
         <div className='adminMainDiv'>
                 <div className='adminSubDiv'>

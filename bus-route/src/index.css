@@ -161,3 +161,28 @@ code {
   display: grid;
   gap: 2px;
 }
+.adminSelectionDiv{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.adminSelectionDivLocal{
+  width: 200%;
+  height: 100%;
+}
+.adminSelectionDivpoint{
+  height: 100%;
+}
+.adminSelectionDivsetc{
+  height: 100%;
+}
+.adminSelectionMainDiv{
+  text-align: center;
+}
+.admintableBtnDiv{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}

@@ -27,6 +27,10 @@ export default function Filters() {
             .catch(err => console.log(err))
     }, [])
 
+    const handleNavi=()=>{
+        navigate('/')
+    }
+
     const getDetails = (e) => {
         setTo(e.target.value)
         const filtered = output.filter(x => x.from === from && x.to === e.target.value)
@@ -39,10 +43,10 @@ export default function Filters() {
         setTo('End point')
         setTable(false)
     }
-    const handleLogout=()=>{
-        auth.Logout()
-        navigate('/')        
-    }
+    // const handleLogout=()=>{
+    //     auth.Logout()
+    //     navigate('/')        
+    // }
 
 
     return (
@@ -79,6 +83,7 @@ export default function Filters() {
                         </Col>
                     </Row>
                 </form>
+                <Button variant='danger' onClick={handleNavi} >Back</Button>
             </div>
 
 

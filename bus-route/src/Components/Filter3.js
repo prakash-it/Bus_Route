@@ -9,8 +9,8 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 
 export default function Filter3() {
-    const [from, setFrom] = useState('Select your Starting point')
-    const [to, setTo] = useState('Select your Ending Point')
+    const [from, setFrom] = useState('Starting point')
+    const [to, setTo] = useState('Ending Point')
     const [output, setOutput] = useState([])
     const [filterData, setFilteredData] = useState([])
     const [table, setTable] = useState(false)
@@ -19,7 +19,7 @@ export default function Filter3() {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:1516/admin`)
+        axios.get(`http://localhost:1516/admin3`)
             .then(res => setOutput(res.data))
             .catch(err => console.log(err))
     }, [])
@@ -54,12 +54,10 @@ export default function Filter3() {
                             <InputGroup.Text className='filterS1' variant="dark" id="inputGroup-sizing-sm">From :
                                 <Form.Select value={from} onChange={(e) => setFrom(e.target.value)}>
                                     <option>Starting point</option>
-                                    <option value='Salem'>Salem</option>
-                                    <option value='Erode'>Erode</option>
-                                    <option value="Tirppur">Tirppur</option>
-                                    <option value='Karur'>Karur</option>
-                                    <option value='Dindigul'>Dindigul</option>
-                                    <option value='coimbatore'>Coimbatore</option>
+                                    <option value='tamilnadu'>Tamilnadu</option>
+                                    <option value='karnataka'>Karnataka</option>
+                                    <option value="kerala">Kerala</option>
+                                    <option value='andhra'>Andhra</option>
                                 </Form.Select>
                             </InputGroup.Text>
                         </Col>
@@ -67,12 +65,10 @@ export default function Filter3() {
                             <InputGroup.Text className='filterS1' id="inputGroup-sizing-sm">To :
                                 <Form.Select value={to} onChange={getDetails}>
                                     <option>End Point</option>
-                                    <option value='Salem'>Salem</option>
-                                    <option value='Erode'>Erode</option>
-                                    <option value="Tirppur">Tirppur</option>
-                                    <option value='Karur'>Karur</option>
-                                    <option value='Dindigul'>Dindigul</option>
-                                    <option value='coimbatore'>Coimbatore</option>
+                                    <option value='tamilnadu'>Tamilnadu</option>
+                                    <option value='karnataka'>Karnataka</option>
+                                    <option value="kerala">Kerala</option>
+                                    <option value='andhra'>Andhra</option>
                                 </Form.Select>
                             </InputGroup.Text>
                         </Col>
