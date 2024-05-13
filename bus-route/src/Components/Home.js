@@ -1,5 +1,8 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import image1 from '../img1.jpg';
+import image2 from '../img2.jpg';
+import image3 from '../img3.webp';
 import image6 from '../img6.jpg'
 import '../index.css'
 import '../Components/Home.css'
@@ -99,12 +102,8 @@ const handleClick3 = (props) => {
         </div>
       </div>
       {/*======================================== Banner content End==============================*/}
-
-       
-
-
-
     </div>
   )
 }
+
 

@@ -95,7 +95,6 @@
       "to": "coimbatore"
     },
     {
-      
       "id": "4gghj",
       "busno": "45",
       "time": "2:00",
@@ -110,7 +109,6 @@
       "to": "Salem"
     },
     {
-    
       "id": "675hg",
       "busno": "145",
       "time": "8:00",
@@ -118,7 +116,6 @@
       "to": "Salem"
     },
     {
-      
       "id": "67hhg",
       "busno": "145",
       "time": "10:00",
@@ -210,6 +207,12 @@
       "name": "pc",
       "email": "pc1516@gmail.com",
       "password": "151678"
+    },
+    {
+      "id": "8256",
+      "name": "Ben",
+      "email": "ben10@gmail.com",
+      "password": "12345"
     }
   ],
   "visitors": [
