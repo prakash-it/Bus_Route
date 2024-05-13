@@ -7,7 +7,6 @@ import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
-import { useAuth } from './Auth';
 import {useNavigate} from 'react-router-dom'
 
 export default function Filters() {
@@ -17,7 +16,7 @@ export default function Filters() {
     const [output, setOutput] = useState([])
     const [filterData, setFilteredData] = useState([])
     const [table, setTable] = useState(false)
-    const auth =useAuth()
+  
     const navigate = useNavigate()
 
 
@@ -52,7 +51,7 @@ export default function Filters() {
     return (
         <div className='filterMainDiv'>
             <div className='filterDiv'>
-                <h2 className='bus-head'>welcome {auth.user}</h2>
+                <h2 className='bus-head'>welcome To the Local bus </h2>
                
             <h1 className='bus-head'>Select the Location to travel</h1>
                 <form className='filterForm'>
@@ -83,7 +82,10 @@ export default function Filters() {
                         </Col>
                     </Row>
                 </form>
-                <Button variant='danger' onClick={handleNavi} >Back</Button>
+                <Button className='col-sm-2' variant="danger" onClick={handleNavi}>
+                    Back
+                </Button>
+                
             </div>
 
 

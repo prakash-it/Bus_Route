@@ -144,20 +144,6 @@
       "to": "trichy"
     },
     {
-      "id": "e1e1",
-      "busno": "34",
-      "time": "5:00pm",
-      "from": "erode",
-      "to": "trichy"
-    },
-    {
-      "id": "8624",
-      "busno": "45",
-      "time": "2:00pm",
-      "from": "pollachi",
-      "to": "trichy"
-    },
-    {
       "id": "e4ac",
       "busno": "75a",
       "time": "6:00pm",
@@ -251,15 +237,9 @@
       "password": "151678"
     },
     {
-<<<<<<< HEAD
-      "id": "8256",
-      "name": "Ben",
-      "email": "ben10@gmail.com",
-=======
       "id": "91f0",
       "name": "Karthi",
       "email": "karthimama@gmail.com",
->>>>>>> 9670d91879ea53b9d159aba5bf46ead2f924cab6
       "password": "12345"
     }
   ],

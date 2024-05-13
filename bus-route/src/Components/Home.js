@@ -85,7 +85,7 @@ const handleClick3 = (props) => {
       {/*=================================== Image card row End===================================== */}
 
       {/*======================================== Banner content start==============================*/}
-      <div class='banner-container'>
+      <div class='banner-container '>
         <div className='bus-para'>
           <p>
             Welcome to Route Bus City Transport Portal, your comprehensive platform for all things related to city transportation via bus routes. Our portal aims to provide you with seamless access to information about bus routes, schedules, fares, and much more to enhance your urban commuting experience.
