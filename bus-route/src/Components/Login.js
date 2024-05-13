@@ -32,7 +32,7 @@ export default function Login(props) {
                 setIslogged(true);
                 localStorage.setItem('email', email); 
                 localStorage.setItem('password', password); 
-                navigate('/Filter');
+                navigate('/');
             } else {
                 setErrmsg("Incorrect Password");
             }

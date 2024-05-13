@@ -5,22 +5,27 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../index.css'
-
-
+import { useNavigate } from 'react-router-dom';
+import AdminTable from './Admintable';
 
 
 export default function Admin() {
 
     const [busno, setNumber] = useState('')
     const [time, setTime] = useState('')
-    const [from, setFrom] = useState('select')
-    const [to, setTo] = useState('select')
+    const [from, setFrom] = useState('Select Start Place')
+    const [to, setTo]=useState('select End place')
+    const navigate = useNavigate()
 
     const storeData=()=>{
         // e.preventDefault()
         axios.post('http://localhost:1516/admin', {busno, time, from, to})
         .then(res=>console.log(res))
         .catch(err=>console.log(err))
+    }
+
+    const userlogin = () => {
+        navigate('/')
     }
 
     return (

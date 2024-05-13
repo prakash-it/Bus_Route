@@ -21,13 +21,18 @@ import Admin from './Components/Admin';
 import Profil from './Components/Profil';
 import Filter2 from './Components/Filter2';
 import Login2 from './Components/Login2';
+import Headroom from 'react-headroom'
+import AdminTable from './Components/Admintable';
 
 
 function App() {
   return (
-    <div className="App">
+    <div className="App">      
       <Auth>
-        <Navbar />
+        <Headroom>
+        <Navbar/>
+        </Headroom>
+      
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -38,15 +43,13 @@ function App() {
           <Route path='/Filter' element={<Filters />} />
           <Route path='/Filter2' element={<Filter2/>}/>
           <Route path='/adminlogin' element={<AdminLogin />} />
+          <Route path = 'adminTable' element={<AdminTable/>}/>
           <Route path='/Admin' element={<Admin />} />
           <Route path='/profile' element={<Profil/>}/>
         </Routes>
-      </Auth>
-
-     
+      </Auth>     
     </div>
 
   );
 }
-
 export default App;

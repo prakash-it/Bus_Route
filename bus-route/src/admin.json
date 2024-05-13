@@ -2,19 +2,12 @@
   "adminlogin": [
     {
       "id": "1g3g4",
-      "name": "DPN",
+      "name": "Admin",
       "email": "dpn@gmail.com",
       "password": "12345"
     }
   ],
   "admin": [
-    {
-      "id": "18bf",
-      "busno": "45",
-      "time": "4:00",
-      "from": "singanallur",
-      "to": "gandhipuram"
-    },
     {
       "id": "2a68",
       "busno": "65",
@@ -37,11 +30,11 @@
       "to": "annur"
     },
     {
-      "id": "6854",
-      "busno": "23",
+      "busno": "32",
       "time": "2:00",
       "from": "gandhipuram",
-      "to": "ukkadam"
+      "to": "ukkadam",
+      "id": "6854"
     },
     {
       "busno": "1516",
@@ -77,6 +70,13 @@
       "time": "12",
       "from": "ukkadam",
       "to": "gandhipuram"
+    },
+    {
+      "id": "26d9",
+      "busno": "75a",
+      "time": "6.00am",
+      "from": "singanallur",
+      "to": "ukkadam"
     }
   ],
   "admin2": [
@@ -209,9 +209,15 @@
       "password": "151678"
     },
     {
+<<<<<<< HEAD
       "id": "8256",
       "name": "Ben",
       "email": "ben10@gmail.com",
+=======
+      "id": "91f0",
+      "name": "Karthi",
+      "email": "karthimama@gmail.com",
+>>>>>>> 9670d91879ea53b9d159aba5bf46ead2f924cab6
       "password": "12345"
     }
   ],
