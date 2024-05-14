@@ -9,7 +9,9 @@
   ],
   "admin": [
     {
+
       "busno": "65",
+      "busno": "74",
       "time": "5:00",
       "from": "singanallur",
       "to": "gandhipuram",
@@ -74,11 +76,11 @@
   ],
   "admin2": [
     {
-      "id": "1fg67",
-      "busno": "24",
-      "time": "4:00",
+      "busno": "25",
+      "time": "8:00pm",
       "from": "Salem",
-      "to": "coimbatore"
+      "to": "Erode",
+      "id": "1fg67"
     },
     {
       "id": "5g67",
@@ -114,6 +116,34 @@
       "time": "10:00",
       "from": "coimbatore",
       "to": "Salem"
+    },
+    {
+      "id": "1934",
+      "busno": "23",
+      "time": "3:00pm",
+      "from": "pollachi",
+      "to": "selam"
+    },
+    {
+      "id": "ff8d",
+      "busno": "23",
+      "time": "4:00am",
+      "from": "selam",
+      "to": "erode"
+    },
+    {
+      "id": "2446",
+      "busno": "34",
+      "time": "5:00pm",
+      "from": "erode",
+      "to": "trichy"
+    },
+    {
+      "id": "e4ac",
+      "busno": "75a",
+      "time": "6:00pm",
+      "from": "karur",
+      "to": "erode"
     }
   ],
   "user": [
@@ -271,6 +301,29 @@
       "email": "DD@gmail.com",
       "number": "9876543210",
       "msg": "Hi to all"
+    }
+  ],
+  "admin3": [
+    {
+      "id": "bc6f",
+      "busno": "43",
+      "time": "6:00pm",
+      "from": "Kerala",
+      "to": "Mumbai"
+    },
+    {
+      "busno": "34",
+      "time": "10:00pm",
+      "from": "Kerala",
+      "to": "Andhra",
+      "id": "1627"
+    },
+    {
+      "id": "906c",
+      "busno": "64",
+      "time": "8:00pm",
+      "from": "TamilNadu",
+      "to": "Mumbai"
     }
   ]
 }

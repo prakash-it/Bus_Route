@@ -23,6 +23,10 @@ import Filter2 from './Components/Filter2';
 import Login2 from './Components/Login2';
 import Headroom from 'react-headroom'
 import AdminTable from './Components/Admintable';
+import Filter3 from './Components/Filter3';
+import DataInsertion from './Components/DataInsertion';
+import Admin2 from './Components/Admin2';
+import Admin3 from './Components/Admin3';
 
 
 function App() {
@@ -42,10 +46,14 @@ function App() {
           <Route path='/Login2' element={<Login2/>}/> 
           <Route path='/Filter' element={<Filters />} />
           <Route path='/Filter2' element={<Filter2/>}/>
+          <Route path='/Filter3' element={<Filter3/>}/>
           <Route path='/adminlogin' element={<AdminLogin />} />
           <Route path = 'adminTable' element={<AdminTable/>}/>
           <Route path='/Admin' element={<Admin />} />
+          <Route path='/Admin2' element={<Admin2/>}/>
+          <Route path='/Admin3' element={<Admin3/>}/>
           <Route path='/profile' element={<Profil/>}/>
+          <Route path='/DataInsertion' element={<DataInsertion/>}/>
         </Routes>
       </Auth>     
     </div>

@@ -1,5 +1,8 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import image1 from '../img1.jpg';
+import image2 from '../img2.jpg';
+import image3 from '../img3.webp';
 import image6 from '../img6.jpg'
 import '../index.css'
 import '../Components/Home.css'
@@ -82,7 +85,7 @@ const handleClick3 = (props) => {
       {/*=================================== Image card row End===================================== */}
 
       {/*======================================== Banner content start==============================*/}
-      <div class='banner-container'>
+      <div class='banner-container '>
         <div className='bus-para'>
           <p>
             Welcome to Route Bus City Transport Portal, your comprehensive platform for all things related to city transportation via bus routes. Our portal aims to provide you with seamless access to information about bus routes, schedules, fares, and much more to enhance your urban commuting experience.
@@ -102,12 +105,8 @@ const handleClick3 = (props) => {
         </div>
       </div>
       {/*======================================== Banner content End==============================*/}
-
-       
-
-
-
     </div>
   )
 }
+
 

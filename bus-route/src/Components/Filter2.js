@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
-import { useAuth } from './Auth';
+
 import {useNavigate} from 'react-router-dom'
 
 export default function Filter2() {
@@ -16,7 +16,7 @@ export default function Filter2() {
     const [output, setOutput] = useState([])
     const [filterData, setFilteredData] = useState([])
     const [table, setTable] = useState(false)
-    const auth =useAuth()
+   
     const navigate = useNavigate()
 
 
@@ -25,6 +25,10 @@ export default function Filter2() {
             .then(res => setOutput(res.data))
             .catch(err => console.log(err))
     }, [])
+
+    const handleNavi=()=>{
+        navigate('/')
+    }
 
     const getDetails = (e) => {
         setTo(e.target.value)
@@ -75,6 +79,9 @@ export default function Filter2() {
                         </Col>
                     </Row>
                 </form>
+                <Button className='col-sm-2' variant="danger" onClick={handleNavi}>
+                    Back
+                </Button>
             </div>
 
 
