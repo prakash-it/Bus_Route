@@ -9,11 +9,11 @@
   ],
   "admin": [
     {
-      "id": "2a68",
       "busno": "65",
       "time": "5:00",
       "from": "singanallur",
-      "to": "gandhipuram"
+      "to": "gandhipuram",
+      "id": "2a68"
     },
     {
       "id": "4ddb",
@@ -49,13 +49,6 @@
       "time": "5:00",
       "from": "ukkadam",
       "to": "thudiayalur"
-    },
-    {
-      "id": "cb1e",
-      "busno": "21q",
-      "time": "18:63pm",
-      "from": "gandhipuram",
-      "to": "ukkadam"
     },
     {
       "id": "9638",
@@ -271,6 +264,13 @@
       "email": "jbgvjfyjgvh@gmail.com",
       "number": "876543234567",
       "msg": "kjhgfxdcv bnm,"
+    },
+    {
+      "id": "c528",
+      "name": "dhivaker",
+      "email": "DD@gmail.com",
+      "number": "9876543210",
+      "msg": "Hi to all"
     }
   ]
 }

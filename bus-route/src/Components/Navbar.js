@@ -45,7 +45,8 @@ export default function MyNavbar() {
         </Nav>
         <Nav>
           <button style={{ backgroundColor: 'transparent', border: 'none' }}>
-            {!auth.user?<NavLink to="/signin" className="bas-bas nav-link" onClick={() => setMobile(false)}>Sign Up</NavLink>:<div> <NavLink className="nav-link " to="/profile" onClick={()=>setMobile(false)}>{`Welcome ${auth.user}`}</NavLink>
+            {!auth.user?<NavLink to="/signin" className="bas-bas nav-link" onClick={() => setMobile(false)}>Sign Up</NavLink>:
+            <div> <NavLink className="nav-link " to="/profile" onClick={()=>setMobile(false)}>{`Welcome ${auth.user}`}</NavLink>
               </div>}
             {/* {!auth.user?<NavLink to="/signin" className="bas-bas nav-link" onClick={() => setMobile(false)}>Sign Up</NavLink>:<NavLink className="nav-link " to="/profile" onClick={()=>setMobile(false)}>{auth.user}</NavLink>} */}
           </button>
