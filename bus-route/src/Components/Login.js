@@ -27,12 +27,10 @@ export default function Login(props) {
         e.preventDefault();
         axios.get(`http://localhost:4000/users/get/${email}`)
         .then(res => {
-            setUserlist(res.data)
             
             if(res.data[0]?.email){
                 if(res.data[0]?.password===password){
-                    const user = userlist.find(x => x.username)
-                    auth.Login(user.username);
+                    auth.Login(res.data[0]?.username);
                     setErrmsg('')
                     alert("Log in Succesfully")
                     localStorage.setItem('email', email); 
