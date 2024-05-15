@@ -7,6 +7,9 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import '../index.css'
+import sigup2 from '../sigup2.jpg'
+import sigup3 from'../sigup3.jpg'
+
 
 export default function Signin() {
   const [name, setName] = useState('')
@@ -32,12 +35,17 @@ export default function Signin() {
   return (
 
     <div className='signinDiv'>
+       <div className='secondbox'>
+      <img className='sigup2' src={sigup2}/>
+      <img className='sigup3' src={sigup3}/>
+    </div>
+      <div className='signup'>
       <h1 className='bus-head'>Signup with our servers</h1>
-      <form onSubmit={handlesigin}>
+      <form onSubmit={handlesigin} className='sigform'>
         <FloatingLabel
           controlId="floatingInput"
           label="Name"
-          className="mb-4"
+          className="mb-2"
         >
           <Form.Control type="text" placeholder="your full name" value={name} onChange={(e) => { setName(e.target.value) }} />
         </FloatingLabel>
@@ -101,6 +109,8 @@ export default function Signin() {
 
         </Card.Body>
     </Card> */}
+    </div>
+   
     </div>
   )
 }
