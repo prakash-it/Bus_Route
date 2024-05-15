@@ -17,8 +17,7 @@ export default function Home(props) {
   const navigate = useNavigate()
   const navigate2= useNavigate()
   const handleClick = (props) => {
-    console.log("button click");
-    if (auth.user) {
+    if (auth.username) {
         navigate('/Filter');
     } else {
         navigate('/Login');
