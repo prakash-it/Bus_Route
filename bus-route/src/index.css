@@ -72,17 +72,53 @@ code {
   justify-content: center;
   top: auto;
 }
-.signinDiv{
-  display: grid;
-  justify-content: center;
-  padding: 20px;
+
+.secondbox{
+  display: flex;
+  /* border: 2px solid black; */
+  height: fit-content;
+  width: 50%;
 }
-.signinBody{
+.signinDiv{
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid black; */
+  border-radius: 30px;
+  padding: 20px;
+  margin: 20px;
+  gap: 50px;
+  background-color: antiquewhite;
+}
+.signup{
+  display:grid;
+  flex-direction: row;
+  /* border: 2px solid black; */
+  /* gap: 50%;
+  row-gap: 50px; */
+  border: 2px solid whitesmoke;
+  background-color: darkslategrey;
+  border-radius: 10px;
+  box-shadow: 2px solid black;
+}
+.sigform{
+  /* display: grid;
+  height: fit-content;
+  width: fit-content; */
+}
+.sigup2{
+  height: 100%;
+  width: 50%;
+}
+.sigup3{
+  height: 100%;
+  width: 50%;
+}
+/* .signinBody{
   display: grid;
   grid-template-columns: repeat(2, 400px);
   justify-content: center;
-}
-.signinCard{
+} */
+/* .signinCard{
   width: fit-content;
   background-image: url(./signinBackground.jpg);
 }
@@ -95,7 +131,7 @@ code {
 }
 .signinForm{
   color: white;
-}
+} */
 .loginFormDiv{
   width: 400px;
 }
