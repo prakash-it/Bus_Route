@@ -17,28 +17,50 @@ export default function Login(props) {
     const auth = useAuth();
     const navigate = useNavigate();
 
-    useEffect(() => {
-        axios.get(`http://localhost:1516/user`)
-            .then(res => setUserlist(res.data))
-            .catch(err => console.log(err));
-    }, []);
+    // useEffect(() => {
+    //     axios.get(`http://localhost:4000/users/get${email}`)
+    //         .then(res => setUserlist(res.data))
+    //         .catch(err => console.log(err));
+    // }, []);
 
     const handlelogin = (e) => {
         e.preventDefault();
-        const user = userlist.find(x => x.email === email);
-        if (user) {
-            if (user.password === password) {
-                auth.Login(user.name);
-                setIslogged(true);
-                localStorage.setItem('email', email); 
-                localStorage.setItem('password', password); 
-                navigate('/');
-            } else {
-                setErrmsg("Incorrect Password");
+        axios.get(`http://localhost:4000/users/get/${email}`)
+        .then(res => {
+            setUserlist(res.data)
+            if(res.data[0]?.email){
+                if(res.data[0]?.password===password){
+                    auth.Login(auth.user);
+                    setErrmsg('')
+                    alert("Log in Succesfully")
+                    localStorage.setItem('email', email); 
+                    localStorage.setItem('password', password); 
+                    navigate('/')
+                }else{
+                    setErrmsg("Incorrect Password")
+                }
+            }else{
+                setErrmsg("Email not Found")
             }
-        } else {
-            setErrmsg("User not Found Please Signin");
-        }
+            console.log(res.body);
+        })
+        .catch(err => console.log(err));
+
+
+        // const user = userlist.find(x => x.email === email);
+        // if (user) {
+        //     if (user.password === password) {
+        //         auth.Login(user.name);
+        //         setIslogged(true);
+        //         localStorage.setItem('email', email); 
+        //         localStorage.setItem('password', password); 
+        //         navigate('/');
+        //     } else {
+        //         setErrmsg("Incorrect Password");
+        //     }
+        // } else {
+        //     setErrmsg("User not Found Please Signin");
+        // }
     }
     
     const handlelogout = () => {

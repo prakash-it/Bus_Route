@@ -9,10 +9,8 @@
   ],
   "admin": [
     {
-
-      
       "busno": "74",
-      "time": "5:00",
+      "time": "5:20",
       "from": "singanallur",
       "to": "gandhipuram",
       "id": "2a68"
@@ -146,98 +144,7 @@
       "to": "erode"
     }
   ],
-  "user": [
-    {
-      "name": "Adam",
-      "email": "Ad@gmail.com",
-      "password": "12345",
-      "id": "8e03"
-    },
-    {
-      "id": "ee95",
-      "name": "praksh",
-      "email": "pc@gmail.com",
-      "password": "987654"
-    },
-    {
-      "id": "da5f",
-      "name": "Nk",
-      "email": "nk@gmail.com",
-      "password": "1516"
-    },
-    {
-      "id": "a9dd",
-      "name": "dd",
-      "email": "dd@gmail.com",
-      "password": "7122"
-    },
-    {
-      "id": "f445",
-      "name": "dd2",
-      "email": "dd2@gmail.com",
-      "password": "7502"
-    },
-    {
-      "id": "3fd1",
-      "name": "naveen",
-      "email": "nkg@gmail.com",
-      "password": "9876"
-    },
-    {
-      "id": "1f87",
-      "name": "ghsad",
-      "email": "sdfnln@gmail.com",
-      "password": "12345"
-    },
-    {
-      "id": "97da",
-      "name": "Sahana",
-      "email": "sahan@gmail.com",
-      "password": "NaveenMama"
-    },
-    {
-      "id": "c1ee",
-      "name": "Sahana",
-      "email": "rithanya@gmail.com",
-      "password": "naveenmama"
-    },
-    {
-      "id": "5f0d",
-      "name": "vki",
-      "email": "vki@gmail.com",
-      "password": "232323"
-    },
-    {
-      "id": "acf0",
-      "name": "welcome",
-      "email": "wel@gmail.com",
-      "password": "343434"
-    },
-    {
-      "id": "8a4a",
-      "name": "welcome",
-      "email": "vki@32.cp",
-      "password": "323232"
-    },
-    {
-      "id": "dccc",
-      "name": "Hema lakshmi",
-      "email": "hema@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "659c",
-      "name": "pc",
-      "email": "pc1516@gmail.com",
-      "password": "151678"
-    },
-    {
-      "id": "91f0",
-      "name": "Karthi",
-      "email": "karthimama@gmail.com",
-      "password": "12345"
-    }
-  ],
+  
   "visitors": [
     {
       "id": "d2f4",

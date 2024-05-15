@@ -14,15 +14,21 @@ export default function Signin() {
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
 
-  const handlesigin = () => {
-    axios.post(`http://localhost:1516/user`, { name, email, password })
-      .then(res => console.log(res))
-      .catch(err => console.log(err))
+  const handlesigin =(e)=> {
+    e.preventDefault()
+    const fromData={
+      username:name,
+      email:email,
+      password:password
+    }
+
+    //axios get the data from db
+    axios.post(`http://localhost:4000/users/post`,fromData)
+    .then(res=>console.log(res))
+    .catch(err=>console.log(err))
     navigate('/Login')
   }
-  // const handlelog=()=>{
-  //   navigate('/Login')
-  // }
+
   return (
 
     <div className='signinDiv'>
