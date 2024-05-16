@@ -25,7 +25,7 @@ export default function Home(props) {
 };
 const handleClick2 = (props) => {
 console.log("click");
-  if (auth.user) {
+  if (auth.username) {
       navigate2('/Filter2');
      
   } else {
@@ -35,7 +35,7 @@ console.log("click");
 
 const handleClick3 = (props) => {
 
-  if (auth.user) {
+  if (auth.username) {
       navigate('/Filter3');
   } else {
       navigate('/Login');

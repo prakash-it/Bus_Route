@@ -6,6 +6,14 @@ const userSchema = new mondoose.Schema({
     password:String
 })
 
-const UserModel= mondoose.model('userData',userSchema)
+// const userbus = new mondoose.Schema({
+//     busno:String,
+//     time:Number,
+//     from:String,
+//     to:String
 
+// })
+
+const UserModel= mondoose.model('userData',userSchema)
+// const Userbus = mondoose.model('userbus', userbus)
 module.exports=UserModel

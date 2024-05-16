@@ -42,10 +42,7 @@ export default function Filters() {
         setTo('End point')
         setTable(false)
     }
-    // const handleLogout=()=>{
-    //     auth.Logout()
-    //     navigate('/')        
-    // }
+
 
 
     return (

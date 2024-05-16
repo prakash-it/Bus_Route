@@ -1,5 +1,6 @@
 const express = require('express')
 const User= require('./routes/ConstUser')
+const Buses= require('./routes/Buses')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const app = express()
@@ -12,7 +13,10 @@ mongoose.connection.on('connected',()=>{
 app.get('/',(req,res)=>{
     res.send("Back-server")
 })
+
 app.use('/users',User)
+app.use('/buses', Buses)
+
 app.listen(4000,()=>{
     console.log("Server is running");
 })
