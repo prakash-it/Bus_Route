@@ -88,6 +88,8 @@ export default function Filters() {
                 
             </div>
 
+            
+
 
 
 
@@ -173,6 +175,7 @@ export default function Filters() {
                                 <th>Time</th>
                                 <th>Start</th>
                                 <th>End</th>
+                                <th>Track Your Bus</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -182,6 +185,7 @@ export default function Filters() {
                                 <td>{x.time}</td>
                                 <td>{x.from}</td>
                                 <td>{x.to}</td>
+                                <td><Button variant='primary'>Track</Button></td>
                             </tr>))}
                         </tbody>
                     </Table>
@@ -213,6 +217,23 @@ export default function Filters() {
 //         </tbody>
 //     </table>
 // )} */}
+
+            <div>
+                Details Div
+                what is javaScript?
+
+Javascript is the programming language fot the web. it is lightweight, cross-platform, single-threaded, and interpreted compiled programming language.
+
+what are the primitive datatypes in Js?
+
+String 
+Number
+Boolean
+undefined
+Null
+Symbol
+
+            </div>
         </div>
 
        

@@ -27,16 +27,16 @@ import Filter3 from './Components/Filter3';
 import DataInsertion from './Components/DataInsertion';
 import Admin2 from './Components/Admin2';
 import Admin3 from './Components/Admin3';
+import Track from './Components/Track';
 
 
 function App() {
   return (
     <div className="App">      
-      <Auth>
+      {/* <Auth>
         <Headroom>
         <Navbar/>
-        </Headroom>
-      
+        </Headroom>      
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -55,7 +55,8 @@ function App() {
           <Route path='/profile' element={<Profil/>}/>
           <Route path='/DataInsertion' element={<DataInsertion/>}/>
         </Routes>
-      </Auth>     
+      </Auth>      */}
+      <Track/>
     </div>
 
   );
