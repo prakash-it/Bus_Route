@@ -87,7 +87,7 @@ code {
   padding: 20px;
   margin: 20px;
   gap: 50px;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 .signup{
   display:grid;
@@ -95,9 +95,9 @@ code {
   /* border: 2px solid black; */
   /* gap: 50%;
   row-gap: 50px; */
-  border: 2px solid whitesmoke;
-  background-color: darkslategrey;
-  border-radius: 10px;
+  /* border: 2px solid whitesmoke; */
+  /* background-color: darkslategrey; */
+  /* border-radius: 10px; */
   box-shadow: 2px solid black;
 }
 .sigform{
@@ -106,12 +106,12 @@ code {
   width: fit-content; */
 }
 .sigup2{
-  height: 100%;
-  width: 50%;
+  /* height: 100%; */
+  /* width: 50%; */
 }
 .sigup3{
-  height: 100%;
-  width: 50%;
+  /* height: 100%; */
+  /* width: 50%; */
 }
 /* .signinBody{
   display: grid;
