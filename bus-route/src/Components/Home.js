@@ -16,8 +16,9 @@ export default function Home(props) {
   const auth= useAuth()
   const navigate = useNavigate()
   const navigate2= useNavigate()
+
   const handleClick = (props) => {
-    if (auth.username) {
+    if (auth.user) {
         navigate('/Filter');
     } else {
         navigate('/Login');
@@ -25,7 +26,7 @@ export default function Home(props) {
 };
 const handleClick2 = (props) => {
 console.log("click");
-  if (auth.username) {
+  if (auth.user) {
       navigate2('/Filter2');
      
   } else {
@@ -35,7 +36,7 @@ console.log("click");
 
 const handleClick3 = (props) => {
 
-  if (auth.username) {
+  if (auth.user) {
       navigate('/Filter3');
   } else {
       navigate('/Login');
