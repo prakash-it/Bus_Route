@@ -7,7 +7,7 @@ const UserModel = require('../models/bus-model')
 router.use(bodyparser.json())
 
 router.get('/',(req,res)=>{
-    res.send("Ex-bus-pages")
+    res.send("SETC-bus-pages")
 })
 
 router.get('/get',(req,res)=>{

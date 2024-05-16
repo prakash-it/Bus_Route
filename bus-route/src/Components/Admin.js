@@ -34,6 +34,9 @@ export default function Admin() {
         setNumber('')
     }
 
+    const btn =()=>{
+        navigate('/DataInsertion')
+    }
     return (
         <div className='adminMainDiv'>
                 <div className='adminSubDiv'>
@@ -101,6 +104,10 @@ export default function Admin() {
 
                         <Button variant="primary" type="submit" className='admin-btn'>
                             Submit
+                        </Button>
+                        
+                    <Button variant="primary" onClick={btn} className='adnim-btn'>
+                            Back
                         </Button>
                     </Form>
         </div>
