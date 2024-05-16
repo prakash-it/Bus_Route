@@ -35,10 +35,6 @@ export default function Signin() {
   return (
 
     <div className='signinDiv'>
-       <div className='secondbox'>
-      <img className='sigup2' src={sigup2}/>
-      <img className='sigup3' src={sigup3}/>
-    </div>
       <div className='signup'>
       <h1 className='bus-head'>Signup with our servers</h1>
       <form onSubmit={handlesigin} className='sigform'>

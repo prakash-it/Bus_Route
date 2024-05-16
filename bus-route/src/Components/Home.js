@@ -43,12 +43,12 @@ const handleClick3 = (props) => {
 };
   return (
     <div>
-      <h1 className='bus-head'>Route Bus City Transport Portal</h1>
+      <h1 className='bus-head fade-in'>Route Bus City Transport Portal</h1>
       {/*=================================== Image-card row start===================================== */}
       <div className='buscard'>
         <div class="row col-lg-12">
           <div class="col-sm-3 mb-3 mb-sm-0 cardDiv">
-            <div class="card">
+            <div class="card fade-in delay-1">
               <img className='myImage' src={image6} alt='busImage' />
               <div class="card-body">
                 <h5 class="card-title">Local Buses</h5>
@@ -58,7 +58,7 @@ const handleClick3 = (props) => {
             </div>
           </div>
           <div class="col-sm-3">
-            <div class="card">
+            <div class="card fade-in delay-2">
               <img className='myImage' src={image6} alt='busImage' />
               <div class="card-body">
                 <h5 class="card-title">Point to Point Buses</h5>
@@ -70,7 +70,7 @@ const handleClick3 = (props) => {
            
           </div>
           <div class="col-sm-3">
-            <div class="card">
+            <div class="card fade-in delay-3">
               <img className='myImage' src={image6} alt='busImage' />
               <div class="card-body">
                 <h5 class="card-title">SETC Buses</h5>
@@ -85,7 +85,7 @@ const handleClick3 = (props) => {
 
       {/*======================================== Banner content start==============================*/}
       <div class='banner-container '>
-        <div className='bus-para'>
+        <div className='bus-para fade-in delay-4'>
           <p>
             Welcome to Route Bus City Transport Portal, your comprehensive platform for all things related to city transportation via bus routes. Our portal aims to provide you with seamless access to information about bus routes, schedules, fares, and much more to enhance your urban commuting experience.
           </p>
