@@ -1,6 +1,7 @@
 const express = require('express')
 const User= require('./routes/ConstUser')
 const Buses= require('./routes/Buses')
+const Buses2=require('./routes/Buses2')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const app = express()
@@ -16,6 +17,7 @@ app.get('/',(req,res)=>{
 
 app.use('/users',User)
 app.use('/buses', Buses)
+app.use('/express',Buses2)
 
 app.listen(4000,()=>{
     console.log("Server is running");
