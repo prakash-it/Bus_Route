@@ -144,8 +144,8 @@ export default function AdminTable() {
         })
             .then(res => {
                 console.log(res.data);
-                fetchAdmin2Data(); // Refresh admin data after update
-                setPopup2(false); // Close popup after update
+                fetchAdmin2Data(); 
+                setPopup2(false);
             })
             .catch(error => {
                 console.log('Error updating admin data:', error);
@@ -220,8 +220,7 @@ export default function AdminTable() {
                                             <Button variant="success" onClick={() => openPopup(adminData)}>Update</Button>
                                             <Button variant="danger" onClick={() => handleDelete(adminData.id)}>Delete</Button>
                                         </div>
-                                        {/* <button onClick={() => openPopup(adminData)}>Update</button>
-                                <button onClick={() => handleDelete(adminData.id)}>Delete</button> */}
+                                  0
                                     </td>
                                 </tr>
                             ))}

@@ -18,25 +18,32 @@ export default function AdminLogin(props) {
     const adminAuth = useAuth()
 
 
-    useEffect(() => {
-        axios.get('http://localhost:1516/adminlogin')
-            .then(res => setUserlist(res.data))
-            .catch(err => console.log(err))
-    }, [])
+    // useEffect(() => {
+    //     axios.get('http://localhost:1516/adminlogin')
+    //         .then(res => setUserlist(res.data))
+    //         .catch(err => console.log(err))
+    // }, [])
 
     const handlelogin = (e) => {
         e.preventDefault()
-        const user = userlist.find(x => x.email === email)
-        if (user) {
-            if (user.password === password) {
-               adminAuth.Login(user.name)
-                navigate('/')
-            } else {
-                setErrmsg("Incorrect Password")
-            }
-        } else {
-            setErrmsg("Your not An Admin")
-        }
+        axios.get(`http://localhost:4000/admin/get/${email}`)
+        .then(res=>{
+            if(res.data[0]?.email){
+                if(res.data[0]?.password===password)
+                    {
+                        adminAuth.Login(res.data[0]?.username) 
+                        setErrmsg('')
+                    alert("Log in Succesfully")
+                    navigate('/DataInsertion')
+                    }
+                    else{
+                        setErrmsg("Incorrect Password")
+                    }
+                }else{
+                    setErrmsg("Email not Found")
+                }
+        })
+        .catch(err => console.log(err));
     }
 
     

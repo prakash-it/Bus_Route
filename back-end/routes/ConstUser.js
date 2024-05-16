@@ -10,14 +10,28 @@ router.get('/', (req, res) => {
     res.send("users-page")
 })
 
-router.get('/get',(req,res)=>{
-    UserModel.find()
-    .then(response=>res.send(response))
-    .catch(err=>console.log(err))
-    res.send("User Data is get")
-    console.log("get the page ");
-})
+// router.get('/get',(req,res)=>{
+//     UserModel.find()
+//     .then(response=>res.send(response))
+//     .catch(err=>console.log(err))
+//     res.send("User Data is get")
+//     console.log("get the page ");
+// })
 
+
+router.get('/get', (req, res) => {
+   
+    UserModel.find({})
+        .then(users => {
+            
+            res.json(users);
+        })
+        .catch(err => {
+            
+            console.error(err);
+            res.status(500).json({ error: 'Internal Server Error' });
+        });
+});
 
 
 router.post('/post',(req, res) => {

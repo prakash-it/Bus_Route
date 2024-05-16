@@ -2,7 +2,7 @@ const express = require('express')
 const router =express.Router()
 const bodyparser=require('body-parser')
 
-const UserModel = require('../models/bus-model')
+const UserModels = require('../models/bus-model')
 
 router.use(bodyparser.json())
 
@@ -10,17 +10,21 @@ router.get('/',(req,res)=>{
     res.send("bus-pages")
 })
 
-router.get('/get',(req,res)=>{
-    UserModel.find()
-    .then(response=>res.send(response))
-    .catch(err=>console.log(err))
-    res.send("User Data is get")
-    console.log("get the page ");
-})
+router.get('/get/:to', (req, res) => {
+    UserModels.find(req.params.to)
+        .then(response => {
+            res.send(response); 
+            console.log("Bus Data is get");
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).send("Internal Server Error"); 
+        });
+});
 
 
 router.post('/post',(req,res)=>{
-    const newbus = new UserModel(req.body)
+    const newbus = new UserModels(req.body)
     newbus.save()
     .then(response=>console.log(response))
     .catch(err=>console.log(err))
