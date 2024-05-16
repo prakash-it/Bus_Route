@@ -8,7 +8,7 @@ import Table from 'react-bootstrap/Table';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Filter2() {
     const [from, setFrom] = useState('Select your Starting point')
@@ -16,25 +16,28 @@ export default function Filter2() {
     const [output, setOutput] = useState([])
     const [filterData, setFilteredData] = useState([])
     const [table, setTable] = useState(false)
-   
+
     const navigate = useNavigate()
 
-
     useEffect(() => {
-        axios.get(`http://localhost:1516/admin2`)
-            .then(res => setOutput(res.data))
-            .catch(err => console.log(err))
-    }, [])
+        if (from && to) {
+            axios.get(`http://localhost:4000/buses/get/${from}/${to}`)
+                .then(res => {
+                    setOutput(res.data);
+                    setFilteredData(res.data);
+                    setTable(true);
+                })
+                .catch(err => console.error(err));
+        }
+    }, [from, to]);
 
-    const handleNavi=()=>{
+    const handleNavi = () => {
         navigate('/')
     }
 
     const getDetails = (e) => {
-        setTo(e.target.value)
-        const filtered = output.filter(x => x.from === from && x.to === e.target.value)
-        setFilteredData(filtered)
-        setTable(true)
+        const destination = e.target.value;
+        setTo(destination);
     }
 
     const clearFunction = () => {
@@ -42,13 +45,13 @@ export default function Filter2() {
         setTo('End point')
         setTable(false)
     }
-  
+
 
     return (
         <div className='filterMainDiv'>
             <div className='filterDiv'>
-                <h2 className='bus-head'>welcome to point to point serves </h2>                
-            <h1 className='bus-head'>Select the Location to travel</h1>
+                <h2 className='bus-head'>welcome to point to point serves </h2>
+                <h1 className='bus-head'>Select the Location to travel</h1>
                 <form className='filterForm'>
                     <Row>
                         <Col>
@@ -119,7 +122,7 @@ export default function Filter2() {
 )} */}
 
 
-             {/* <h1 className='bus-head'>Select the Location to travel</h1>
+            {/* <h1 className='bus-head'>Select the Location to travel</h1>
             <form className='filterForm'>
                 <Row>
                     <Col>
@@ -146,7 +149,7 @@ export default function Filter2() {
             </form> */}
 
 
-                {/* <label>From:</label>
+            {/* <label>From:</label>
         <select value={from} onChange={(e)=>setFrom(e.target.value)}>
             <option value='ukkadam'>Ukkadam</option>
             <option value="GH">GH</option>
@@ -161,34 +164,34 @@ export default function Filter2() {
             <option value='gandhipuram'>Gandhipuram</option>
         </select><br></br> */}
 
-                {table && filterData.length > 0&&(
-                    <Table responsive striped bordered hover size='lg' variant='dark'>
-                        <thead>
-                            <tr>
-                                <th>Bus.No</th>
-                                <th>Time</th>
-                                <th>Start</th>
-                                <th>End</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                              {filterData.sort((a, b) => a.time.localeCompare(b.time)).map((x) =>
-                               (<tr key={x.busno}>
-                                <td>{x.busno}</td>
-                                <td>{x.time}</td>
-                                <td>{x.from}</td>
-                                <td>{x.to}</td>
-                            </tr>))}
-                        </tbody>
-                    </Table>
-                )}
-                {table&&<Button className='col-sm-2' variant="light" onClick={clearFunction}>
-                    Clear
-                </Button>}
-                
+            {table && filterData.length > 0 && (
+                <Table responsive striped bordered hover size='lg' variant='dark'>
+                    <thead>
+                        <tr>
+                            <th>Bus.No</th>
+                            <th>Time</th>
+                            <th>Start</th>
+                            <th>End</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {filterData.sort((a, b) => a.time.localeCompare(b.time)).map((x) =>
+                        (<tr key={x.busno}>
+                            <td>{x.busno}</td>
+                            <td>{x.time}</td>
+                            <td>{x.from}</td>
+                            <td>{x.to}</td>
+                        </tr>))}
+                    </tbody>
+                </Table>
+            )}
+            {table && <Button className='col-sm-2' variant="light" onClick={clearFunction}>
+                Clear
+            </Button>}
 
-{/* // {table   && filterData.length > 0 ( */}
-{/* //     <table>
+
+            {/* // {table   && filterData.length > 0 ( */}
+            {/* //     <table>
 //         <thead>
 //             <tr>
 //                 <th>Bus.No</th>
@@ -198,8 +201,8 @@ export default function Filter2() {
 //             </tr>
 //         </thead>
 //         <tbody> */}
-{/* //             {filterData.sort((a, b) => a.time.localeCompare(b.time)).map((x) => ( */}
-{/* //                 <tr key={x.busno}>
+            {/* //             {filterData.sort((a, b) => a.time.localeCompare(b.time)).map((x) => ( */}
+            {/* //                 <tr key={x.busno}>
 //                     <td>{x.busno}</td>
 //                     <td>{x.time}</td>
 //                     <td>{x.from}</td>
@@ -211,6 +214,6 @@ export default function Filter2() {
 // )} */}
         </div>
 
-       
+
     )
 }

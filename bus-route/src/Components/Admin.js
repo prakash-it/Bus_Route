@@ -6,7 +6,6 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../index.css'
 import { useNavigate } from 'react-router-dom';
-import AdminTable from './Admintable';
 
 
 export default function Admin() {

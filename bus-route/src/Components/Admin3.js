@@ -4,24 +4,34 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import '../Components/Nav.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Admin3() {
     const[busno, setNumber]=useState('')
     const [time, setTime]=useState('')
-    const [from, setFrom]=useState('select start point')
-    const [to, setTo]=useState('select end point')
-
+    const [from, setFrom]=useState('')
+    const [to, setTo]=useState('')
+    const navigate=useNavigate()
 
     const storeData=(e)=>{
         e.preventDefault()
-        axios.post('http://localhost:1516/admin3',{busno, time, from, to})
-        .then(res=>console.log(res.data))
+        e.preventDefault()
+        const busdata={
+            busno:busno,
+            time:time,
+            from:from,
+            to:to
+        }
+        axios.post('http://localhost:4000/buses/post',busdata)
+        .then(res=>console.log(res))
         .catch(err=>console.log(err))
-
         setNumber('')
         setTime('')
-        setFrom('select start point')
-        setTo('select end point')
+        setFrom('')
+        setTo('')
+    }
+    const btn =()=>{
+        navigate('/DataInsertion')
     }
 
   return (
@@ -42,25 +52,30 @@ export default function Admin3() {
                             <Form.Control type="text" value={time} onChange={(e) => setTime(e.target.value)} />
                         </Form.Group>
                         <Form.Label>From: </Form.Label>
-                        <Form.Select value={from} onChange={(e) => (setFrom(e.target.value))} aria-label="Default select example">
+                        {/* <Form.Select value={from} onChange={(e) => (setFrom(e.target.value))} aria-label="Default select example">
                             <option>Select Location</option>
                             <option value='TamilNadu'>TamilNadu</option>
                             <option value='Kerala'>Kerala</option>
                             <option value='Karnataka'>Karnataka</option>
                             <option value='Andhra'>Andhra</option>
                             <option value='Mumbai'>Mumbai</option>
-                        </Form.Select>
+                        </Form.Select> */}
+                          <Form.Control type="text" value={from} onChange={(e) => setFrom(e.target.value)} placeholder='Select Start Place' />
                         <Form.Label>To </Form.Label>
-                        <Form.Select value={to} onChange={(e) => (setTo(e.target.value))} aria-label="Default select example">
+                        {/* <Form.Select value={to} onChange={(e) => (setTo(e.target.value))} aria-label="Default select example">
                             <option>Select Location</option>
                             <option value='TamilNadu'>TamilNadu</option>
                             <option value='Kerala'>Kerala</option>
                             <option value='Karnataka'>Karnataka</option>
                             <option value='Andhra'>Andhra</option>
                             <option value='Mumbai'>Mumbai</option>
-                        </Form.Select><br></br>
+                        </Form.Select> <br></br> */}
+                         <Form.Control type="text" value={to} onChange={(e) => setTo(e.target.value)} placeholder='select End place'/>
                         <Button variant="primary" type="submit" className='admin-btn'>
                             Submit
+                        </Button>
+                        <Button variant="primary" onClick={btn} className='adnim-btn'>
+                            Back
                         </Button>
                     </Form>
                     </div>

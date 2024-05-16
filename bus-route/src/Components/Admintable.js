@@ -44,7 +44,7 @@ export default function AdminTable() {
     }, []);
 
     const fetchAdminData = () => {
-        axios.get('http://localhost:1516/admin')
+        axios.get('http://localhost:4000/buses/get')
             .then(response => {
                 setAdmin(response.data);
             })
@@ -54,7 +54,7 @@ export default function AdminTable() {
     };
 
     const fetchAdmin1Data = () => {
-        axios.get('http://localhost:1516/admin2')
+        axios.get('http://localhost:4000/buses/get')
             .then(response => {
                 setAdmin1(response.data);
             })
@@ -64,7 +64,7 @@ export default function AdminTable() {
     };
 
     const fetchAdmin2Data = () => {
-        axios.get('http://localhost:1516/admin3')
+        axios.get('http://localhost:4000/buses/get')
             .then(response => {
                 setAdmin2(response.data);
             })
@@ -101,8 +101,8 @@ export default function AdminTable() {
         setTo2(data.to);
     };
 
-    const handleUpdate = () => {
-        axios.put(`http://localhost:1516/admin/${id}`, {
+    const handleUpdate = (id1) => {
+        axios.put(`http://localhost:4000/buses/update/${id1}`, {
             busno: busno,
             time: time,
             from: from,
@@ -118,8 +118,8 @@ export default function AdminTable() {
             });
     };
 
-    const handleUpdate1 = () => {
-        axios.put(`http://localhost:1516/admin2/${id1}`, {
+    const handleUpdate1 = (id1) => {
+        axios.put(`http://localhost:4000/buses/update/${id1}`, {
             busno: busno1,
             time: time1,
             from: from1,
@@ -135,8 +135,8 @@ export default function AdminTable() {
             });
     };
 
-    const handleUpdate2 = () => {
-        axios.put(`http://localhost:1516/admin3/${id2}`, {
+    const handleUpdate2 = (id2) => {
+        axios.put(`http://localhost:4000/buses/update/${id2}`, {
             busno: busno2,
             time: time2,
             from: from2,
@@ -153,7 +153,7 @@ export default function AdminTable() {
     };
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:1516/admin/${id}`)
+        axios.delete(`http://localhost:4000/buses/delete/${id}`)
             .then(response => {
                 fetchAdminData(); // Refresh admin data after deletion
             })
@@ -162,8 +162,8 @@ export default function AdminTable() {
             });
     };
 
-    const handleDelete1 = (id1) => {
-        axios.delete(`http://localhost:1516/admin2/${id1}`)
+    const handleDelete1 = (id) => {
+        axios.delete(`http://localhost:4000/buses/delete/${id}`)
             .then(response => {
                 fetchAdmin1Data(); // Refresh admin data after deletion
             })
@@ -172,10 +172,10 @@ export default function AdminTable() {
             });
     };
 
-    const handleDelete2 = (id2) => {
-        axios.delete(`http://localhost:1516/admin3/${id2}`)
+    const handleDelete2 = (id) => {
+        axios.delete(`http://localhost:4000/buses/delete/${id}`)
             .then(response => {
-                fetchAdmin2Data(); // Refresh admin data after deletion
+                fetchAdmin2Data(); 
             })
             .catch(error => {
                 console.log('Error deleting admin data:', error);

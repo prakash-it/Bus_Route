@@ -12,8 +12,7 @@ import { NavLink } from 'react-router-dom';
 // import Logo from '../Components/Images/Logo.png';
 import Navbar from 'react-bootstrap/Navbar';
 import  { useAuth } from './Auth';
-import Admin from './Admin';
-import DataInsertion from './DataInsertion';
+
 
 export default function MyNavbar() {
   const [mobile, setMobile] = useState(false);
@@ -41,7 +40,8 @@ export default function MyNavbar() {
           <NavLink className=" nav-link " to="/" onClick={() => setMobile(false)}>Home</NavLink>
           <NavLink className=" nav-link " to="/about" onClick={() => setMobile(false)}>About</NavLink>
           <NavLink className=" nav-link " to="/contact" onClick={() => setMobile(false)}>Contact</NavLink>
-          {auth.user==='Admin'&&<div className='adminNavDiv'><NavLink className='nav-link' to="/adminTable" onClick={()=>setMobile(false)}>Update</NavLink><NavLink className='nav-link' to="/DataInsertion" onClick={()=>setMobile(false)}>Add Data</NavLink></div>}
+        
+          {auth.user==='DPN'&&<div className='adminNavDiv'><NavLink className='nav-link' to="/adminTable" onClick={()=>setMobile(false)}>Update</NavLink><NavLink className='nav-link' to="/DataInsertion" onClick={()=>setMobile(false)}>Add Data</NavLink></div>}
         </Nav>
         <Nav>
           <button style={{ backgroundColor: 'transparent', border: 'none' }}>

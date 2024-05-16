@@ -17,26 +17,31 @@ export default function Filters() {
     const [filterData, setFilteredData] = useState([]);
     const navigate = useNavigate();
 
-    useEffect(() => {
-        axios.get(`http://localhost:4000/buses/get/${to}`)
-            .then(res => {
-                setOutput(res.data);
-                setFilteredData(res.data)
-            })
-            .catch(err => console.log(err));
-    }, [to]);
 
+
+    useEffect(() => {
+        if (from && to) {
+            axios.get(`http://localhost:4000/buses/get/${from}/${to}`)
+                .then(res => {
+                    setOutput(res.data);
+                    setFilteredData(res.data);
+                    setTable(true);
+                })
+                .catch(err => console.error(err));
+        }
+    }, [from, to]);
+    
+    
+    const getDetails = (e) => {
+        const destination = e.target.value;
+        setTo(destination);
+    };
+
+    
     const handleNavi = () => {
         navigate('/');
     };
-
-    const getDetails = (e) => {
-        setTo(e.target.value);
-        const filtered = output.filter(bus => bus.from === from && bus.to === e.target.value);
-        setFilteredData(filtered);
-        setTable(true);
-    };
-
+    
     const clearFunction = () => {
         setFrom('');
         setTo('');
@@ -55,11 +60,12 @@ export default function Filters() {
                             <InputGroup.Text className='filterS1' variant="dark" id="inputGroup-sizing-sm">From :
                                 <Form.Select value={from} onChange={(e) => setFrom(e.target.value)}>
                                     <option value=''>Select your Starting point</option>
-                                    <option value='ukkadam'>Ukkadam</option>
+                                    <option value='Ukkadam'>Ukkadam</option>
                                     <option value='GH'>GH</option>
                                     <option value="RTO">RTO</option>
-                                    <option value='gandhipuram'>Gandhipuram</option>
-                                    <option value='singanallur'>Singanallur</option>
+                                    <option value='Gandhipuram'>Gandhipuram</option>
+                                    <option value='Singanallur'>Singanallur</option>
+                                    <option value='Ganapathy'>Ganapathy</option>
                                 </Form.Select>
                             </InputGroup.Text>
                         </Col>
@@ -67,11 +73,12 @@ export default function Filters() {
                             <InputGroup.Text className='filterS1' id="inputGroup-sizing-sm">To :
                                 <Form.Select value={to} onChange={getDetails}>
                                     <option value=''>Select your Ending Point</option>
-                                    <option value='ukkadam'>Ukkadam</option>
+                                    <option value='Ukkadam'>Ukkadam</option>
                                     <option value='GH'>GH</option>
                                     <option value="RTO">RTO</option>
-                                    <option value='gandhipuram'>Gandhipuram</option>
-                                    <option value='singanallur'>Ganapathy</option>
+                                    <option value='Gandhipuram'>Gandhipuram</option>
+                                    <option value='Singanallur'>Singanallur</option>
+                                    <option value='Ganapathy'>Ganapathy</option>
                                 </Form.Select>
                             </InputGroup.Text>
                         </Col>
@@ -94,14 +101,13 @@ export default function Filters() {
                             </tr>
                         </thead>
                         <tbody>
-                            {filterData.map((bus) => (
-                                <tr key={bus.busno}>
-                                    <td>{bus.busno}</td>
-                                    <td>{bus.time}</td>
-                                    <td>{bus.from}</td>
-                                    <td>{bus.to}</td>
-                                </tr>
-                            ))}
+                        {filterData.sort((a, b) => a.time.localeCompare(b.time)).map((x) =>
+                        (<tr key={x.busno}>
+                            <td>{x.busno}</td>
+                            <td>{x.time}</td>
+                            <td>{x.from}</td>
+                            <td>{x.to}</td>
+                        </tr>))}
                         </tbody>
                     </Table>
                     <Button className='col-sm-2' variant="light" onClick={clearFunction}>

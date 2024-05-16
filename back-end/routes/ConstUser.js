@@ -22,10 +22,7 @@ router.get('/', (req, res) => {
 router.get('/get', (req, res) => {
    
     UserModel.find({})
-        .then(users => {
-            
-            res.json(users);
-        })
+        .then(users => {res.json(users);})
         .catch(err => {
             
             console.error(err);
@@ -33,14 +30,15 @@ router.get('/get', (req, res) => {
         });
 });
 
-
 router.post('/post',(req, res) => {
-    const newUsers = new UserModel(req.body)
-    newUsers.save()
-        .then(response => console.log(response))
-        .catch(err => console.log(err))
-    res.send("User post page")
+    const newUsers = new UserModel(req.body);
+    newUsers.save() 
+        .then(users => console.log(users)) 
+        .catch(err => console.log(err)); 
+    res.send("User post page"); 
 })
+
+
 
 router.get('/get/:email',(req,res) => {
     console.log(req.params.email)

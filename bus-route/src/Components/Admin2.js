@@ -4,13 +4,14 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import axios from 'axios';
 import '../index.css'
+import { useNavigate } from 'react-router-dom';
 
 export default function Admin2() {
     const [busno, setNumber]=useState('')
     const [time, setTime]=useState('')
     const [from, setFrom]=useState('')
     const [to, setTo]=useState('')
-
+    const navigate = useNavigate()
 
     const storeData=(e)=>{
         e.preventDefault()
@@ -21,7 +22,7 @@ export default function Admin2() {
             from:from,
             to:to
         }
-        axios.post('http://localhost:4000/express/post',busdata)
+        axios.post('http://localhost:4000/buses/post',busdata)
         .then(res=>console.log(res))
         .catch(err=>console.log(err))
         setNumber('')
@@ -29,7 +30,9 @@ export default function Admin2() {
         setFrom('')
         setTo('')
     }
-
+    const btn =()=>{
+        navigate('/DataInsertion')
+    }
     return (
         <div className='adminMainDiv'>
             <div className='adminSubDiv'>
@@ -56,7 +59,7 @@ export default function Admin2() {
                             <option value='karur'>Karur</option>
                             <option value='trichy'>Trichy</option>
                         </Form.Select> */}
-                        <Form.Control type="text" value={from} onChange={(e) => setFrom(e.target.value)} />
+                         <Form.Control type="text" value={from} onChange={(e) => setFrom(e.target.value)} placeholder='Select Start Place' />
                         <Form.Label>To </Form.Label>
                         {/* <Form.Select value={to} onChange={(e) => (setTo(e.target.value))} aria-label="Default select example">
                             <option>Select Location</option>
@@ -66,10 +69,13 @@ export default function Admin2() {
                             <option value='karur'>Karur</option>
                             <option value='trichy'>Trichy</option>
                         </Form.Select><br></br> */}
-                        <Form.Control type="text" value={to} onChange={(e) => setTo(e.target.value)} />
+                         <Form.Control type="text" value={to} onChange={(e) => setTo(e.target.value)} placeholder='select End place'/>
                         <br></br>
                         <Button variant="primary" type="submit" className='admin-btn'>
                             Submit
+                        </Button>
+                        <Button variant="primary" onClick={btn} className='adnim-btn'>
+                            Back
                         </Button>
                     </Form>
                 </div>
